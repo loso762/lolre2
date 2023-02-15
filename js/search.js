@@ -138,7 +138,7 @@ async function PlzInfo(UID) {
 
                         //console.log(PARTY);
                         let matchUsers = PARTY.map((p) => {
-                            return `<li class="matchplayer">${p.summonerName}  <img src="../img/champion/${p.championName}.png" alt=""> <p> ${p.kills} / ${p.deaths} / ${p.assists}</p></li>`
+                            return `<li class="matchplayer">${p.summonerName}  <img src="./img/champion/${p.championName}.png" alt=""> <p> ${p.kills} / ${p.deaths} / ${p.assists}</p></li>`
                         })
     
     ////검색 유저 정보
@@ -169,7 +169,7 @@ async function PlzInfo(UID) {
                             let width = myItemEx[key]?.length*12.5;
 
                             Items +=`<figure>
-                                        <img class="Item" src="../img/item/${I}.png" alt="">
+                                        <img class="Item" src="./img/item/${I}.png" alt="">
                                         <p style="width:${width}px">${myItemEx[key]}</p>
                                     </figure>`
                         })
@@ -240,26 +240,26 @@ async function PlzInfo(UID) {
                                         <li class="playTime">${Playtime}</li>
                                     </ul>
                                     <figure>
-                                        <img class="Pickchamp" id="${myplayer.championName}" src="../img/champion/${myplayer.championName}.png">
+                                        <img class="Pickchamp" id="${myplayer.championName}" src="./img/champion/${myplayer.championName}.png">
                                         <figcaption class="champLevel">${myplayer.champLevel}</figcaption>
                                         <p class="lane">${myplayer.teamPosition}</p>
                                     </figure>
                                     <ul class="matchInfo2">
                                         <li class="spells">
                                             <figure>
-                                                <img class="rune" src="../img/rune/${myRune1}.png">
+                                                <img class="rune" src="./img/rune/${myRune1}.png">
                                                 <figcaption>${Rune1des}</figcaption>
                                             </figure>
                                             <figure>
-                                                <img class="rune" src="../img/rune/${myRune2}.png">
+                                                <img class="rune" src="./img/rune/${myRune2}.png">
                                                 <figcaption>${Rune2des}</figcaption>
                                             </figure>
                                             <figure>
-                                            <img class="spell" src="../img/spell/${myplayer.summoner2Id}.png">
+                                            <img class="spell" src="./img/spell/${myplayer.summoner2Id}.png">
                                             <figcaption>${spell2}</figcaption>
                                             </figure>
                                             <figure>
-                                            <img class="spell" src="../img/spell/${myplayer.summoner1Id}.png">
+                                            <img class="spell" src="./img/spell/${myplayer.summoner1Id}.png">
                                             <figcaption>${spell1}</figcaption>
                                             </figure>
                                         </li>                        
@@ -318,28 +318,28 @@ async function PlzInfo(UID) {
             const rate = (Rankdata[0].wins / (Rankdata[0].wins + Rankdata[0].losses) * 100).toFixed(1);
             if (Rankdata[0].queueType == "RANKED_FLEX_SR") {
                 freetier.innerHTML = `TIER : ${Rankdata[0].tier} ${Rankdata[0].rank}`;
-                freeRankImg.src = `../img/rank/${Rankdata[0].tier}.png`;
+                freeRankImg.src = `./img/rank/${Rankdata[0].tier}.png`;
                 freerecord.innerHTML = `전적 : ${Rankdata[0].wins}승 ${Rankdata[0].losses}패 ( ${rate}% )`;
                 freeLP.innerHTML = `LP : ${Rankdata[0].leaguePoints}`;
 
                 solo0();
             } else if (Rankdata[0].queueType == "RANKED_SOLO_5x5") {
                 solotier.innerHTML = `TIER : ${Rankdata[0].tier} ${Rankdata[0].rank}`;
-                soloRankImg.src = `../img/rank/${Rankdata[0].tier}.png`;
+                soloRankImg.src = `./img/rank/${Rankdata[0].tier}.png`;
                 solorecord.innerHTML = `전적 : ${Rankdata[0].wins}승 ${Rankdata[0].losses}패 ( ${rate}% )`;
                 soloLP.innerHTML = `LP : ${Rankdata[0].leaguePoints}`;
 
                 free0();
             } else if (Rankdata[0].queueType == "RANKED_TFT_DOUBLE_UP" && Rankdata[1].queueType == "RANKED_SOLO_5x5") {
                 solotier.innerHTML = `TIER : ${Rankdata[1].tier} ${Rankdata[1].rank}`;
-                soloRankImg.src = `../img/rank/${Rankdata[1].tier}.png`;
+                soloRankImg.src = `./img/rank/${Rankdata[1].tier}.png`;
                 solorecord.innerHTML = `전적 : ${Rankdata[1].wins}승 ${Rankdata[1].losses}패 ( ${rate}% )`;
                 soloLP.innerHTML = `LP : ${Rankdata[1].leaguePoints}`;
 
                 free0();
             } else if (Rankdata[0].queueType == "RANKED_TFT_DOUBLE_UP" && Rankdata[1].queueType == "RANKED_FLEX_SR") {
                 freetier.innerHTML = `TIER : ${Rankdata[1].tier} ${Rankdata[1].rank}`;
-                freeRankImg.src = `../img/rank/${Rankdata[1].tier}.png`;
+                freeRankImg.src = `./img/rank/${Rankdata[1].tier}.png`;
                 freerecord.innerHTML = `전적 : ${Rankdata[1].wins}승 ${Rankdata[1].losses}패 ( ${rate}% )`;
                 freeLP.innerHTML = `LP : ${Rankdata[1].leaguePoints}`;
 
