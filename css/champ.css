@@ -1,0 +1,499 @@
+@import url("./header.css");
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+ul, li {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "GmarketSansMedium";
+}
+
+.Info {
+  max-width: 1100px;
+  padding: 50px 2vw 0;
+  margin: 70px auto 30px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: -1px -1px 6px #FFF, 1px 1px 6px #BABECC;
+}
+.Info h2 {
+  color: rgb(240, 125, 141);
+  font-size: 30px;
+}
+.Info a {
+  text-decoration: none;
+  color: #bb4545;
+  position: absolute;
+  top: -5px;
+  right: 2px;
+}
+.Info .champInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  position: relative;
+  justify-content: space-around;
+}
+.Info .champInfo li {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  color: rgb(78, 78, 78);
+  background: rgb(255, 255, 255);
+  font-family: "GmarketSansMedium";
+}
+.Info .champInfo li h3 {
+  font-size: 21px;
+}
+.Info .champInfo .image {
+  width: 100%;
+  order: 0;
+  justify-content: left;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 15px 15px 0 0;
+  padding: 30px;
+  position: relative;
+}
+.Info .champInfo .image img {
+  width: 240px;
+  height: 240px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #73d5d5;
+}
+.Info .champInfo .image span {
+  z-index: 99;
+  position: absolute;
+  bottom: 36px;
+  left: 120px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+.Info .champInfo .skins {
+  overflow: hidden;
+  margin: 0;
+  transition: 0.5s;
+  width: 100%;
+  height: 0;
+  padding: 0;
+}
+.Info .champInfo .skins figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  width: 25%;
+  margin: 20px 0;
+}
+.Info .champInfo .skins figure img {
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.Info .champInfo .skins figure figcaption {
+  padding: 0 20px;
+}
+.Info .champInfo .skins .skin {
+  width: 120px;
+  height: 120px;
+}
+.Info .champInfo .skins.active {
+  height: auto;
+  padding: 20px 0;
+}
+.Info .champInfo .name {
+  order: 1;
+  position: absolute;
+  background-color: transparent;
+  top: 35px;
+  left: 300px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bolder;
+  color: #374999;
+}
+.Info .champInfo .title {
+  order: 2;
+  max-width: 300px;
+  line-height: 30px;
+  position: absolute;
+  top: 35px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #374999;
+}
+.Info .champInfo .tags {
+  order: 3;
+  position: absolute;
+  top: 185px;
+  left: 300px;
+  width: 160;
+  height: auto;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(195, 195, 195);
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.Info .champInfo .tags div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 105px;
+  position: relative;
+}
+.Info .champInfo .tags div p {
+  width: 50px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Info .champInfo .tags div img {
+  margin: 15px 20px 5px;
+  width: 50px;
+  height: 50px;
+  filter: brightness(0.9);
+}
+.Info .champInfo .tags div::before {
+  content: "";
+  display: block;
+  width: 98%;
+  height: 1px;
+  background-color: rgb(214, 214, 214);
+  position: absolute;
+  top: 35px;
+  left: 1%;
+}
+.Info .champInfo .partype {
+  order: 4;
+  position: absolute;
+  background-color: transparent;
+  top: 95px;
+  left: 300px;
+  color: #993737;
+}
+.Info .champInfo .blurb {
+  order: 5;
+  width: 100%;
+  border: none;
+  border-radius: 0 0 15px 15px;
+  margin-top: 0;
+  padding: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+.Info .champInfo .stats {
+  order: 6;
+  width: 45%;
+  height: 350px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.Info .champInfo .stats h3 {
+  color: #4253a0;
+  display: block;
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  padding-top: 5px;
+}
+.Info .champInfo .stats p {
+  display: flex;
+  width: 90%;
+  height: 10%;
+  margin: 0 auto;
+}
+.Info .champInfo .stats p span {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  margin: 0;
+}
+.Info .champInfo .stats p span img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  filter: brightness(0.8);
+}
+.Info .champInfo .info {
+  order: 7;
+  flex-direction: column;
+  width: 45%;
+  height: 350px;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-align: center;
+}
+.Info .champInfo .info h3 {
+  color: #4253a0;
+  display: block;
+  width: 100%;
+  height: 15%;
+  padding-top: 10px;
+}
+.Info .champInfo .info div {
+  display: flex;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0;
+  height: 20%;
+  align-items: center;
+}
+.Info .champInfo .info div p {
+  text-align: center;
+  display: block;
+  width: 40%;
+  margin: 0;
+  text-transform: uppercase;
+}
+.Info .champInfo .info div .infodiv {
+  width: 20px;
+  height: 20px;
+  background: #8f97b4;
+  margin: 0 1px;
+}
+.Info .champInfo .skillh3 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 25px;
+  order: 8;
+  color: #f07d8d;
+}
+.Info .champInfo .passive {
+  order: 9;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(78, 78, 78);
+  border-radius: 15px;
+  padding: 10px 40px 20px;
+}
+.Info .champInfo .passive h4 {
+  color: #374999;
+  width: 100%;
+  margin: 10px 0 40px;
+  font-size: 21px;
+  position: relative;
+}
+.Info .champInfo .passive h4::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: azure;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+}
+.Info .champInfo .passive figure {
+  display: flex;
+  align-items: center;
+}
+.Info .champInfo .passive figure img {
+  width: 64px;
+  height: 64px;
+  margin-right: 30px;
+}
+.Info .champInfo .spells {
+  order: 10;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(78, 78, 78);
+  padding: 10px 40px 60px;
+  border-radius: 15px;
+}
+.Info .champInfo .spells .spellBox {
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px 40px;
+  color: rgb(78, 78, 78);
+  background: rgb(240, 240, 240);
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.Info .champInfo .spells .spellBox:hover {
+  border: 3px solid rgb(210, 210, 210);
+}
+.Info .champInfo .spells .spellBox:hover h4::after {
+  background-color: rgb(210, 210, 210);
+}
+.Info .champInfo .spells .spellBox h4 {
+  margin: 10px 0 40px;
+  font-size: 21px;
+  position: relative;
+  color: #374999;
+}
+.Info .champInfo .spells .spellBox h4::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  transition: 0.5s;
+}
+.Info .champInfo .spells .spellBox figure {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.Info .champInfo .spells .spellBox figure img {
+  width: 64px;
+  height: 64px;
+  margin-right: 30px;
+}
+.Info .champInfo .spells .spellBox div p {
+  margin: 10px 0;
+  font-size: 14px;
+  word-spacing: 1px;
+}
+.Info .champInfo .allytips {
+  order: 11;
+  width: 100%;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 15px 15px 0 0;
+  padding: 30px;
+  position: relative;
+  font-size: 14px;
+}
+.Info .champInfo .allytips p {
+  font-weight: bolder;
+  color: #4253a0;
+  font-size: 18px;
+  width: 100%;
+}
+.Info .champInfo .allytips::after {
+  content: "";
+  display: block;
+  width: 92%;
+  height: 1px;
+  background-color: rgb(60, 60, 60);
+  position: absolute;
+  bottom: -10px;
+  left: 3%;
+}
+.Info .champInfo .enemytips {
+  order: 12;
+  width: 100%;
+  margin-top: 0;
+  border: none;
+  border-radius: 0 0 15px 15px;
+  padding: 30px;
+  font-size: 14px;
+  line-height: 180%;
+}
+.Info .champInfo .enemytips p {
+  color: #4253a0;
+  font-size: 18px;
+  font-weight: bolder;
+  width: 100%;
+}
+.Info .champInfo .key, .Info .champInfo .id, .Info .champInfo .lore, .Info .champInfo .recommended {
+  display: none;
+}
+
+.selectChamp {
+  position: relative;
+  max-width: 1100px;
+  margin-top: 200px;
+  padding: 0 2vw;
+  border-radius: 5px;
+}
+.selectChamp .typeChamp {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-bottom: 1px solid #5e5e5e;
+}
+.selectChamp .typeChamp li {
+  width: 100px;
+  height: 40px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  transition: 0.4s;
+}
+.selectChamp .typeChamp li.active {
+  background-color: rgb(240, 125, 141);
+  color: white;
+}
+.selectChamp .typeChamp li.active:hover {
+  color: white;
+}
+.selectChamp .typeChamp li:hover {
+  border: 1px #f07d8d solid;
+  color: #f07d8d;
+}
+.selectChamp .champList {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.selectChamp .champList li {
+  padding: 2px 15px;
+  margin: 5px 6px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  word-break: keep-all;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.selectChamp .champList li.active {
+  background-color: rgb(240, 125, 141);
+  color: white;
+}
+.selectChamp .champList li.active:hover {
+  color: white;
+}
+.selectChamp .champList li:hover {
+  color: #f07d8d;
+  border: 1px #f07d8d solid;
+}/*# sourceMappingURL=champ.css.map */

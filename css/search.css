@@ -1,0 +1,1678 @@
+@import url("./header.css");
+.info .info1, .info .info0 {
+  background-color: rgb(243, 243, 243);
+  box-shadow: -3px -3px 10px #FFF, 3px 3px 10px #BABECC;
+  border-radius: 25px;
+  transition: 1s;
+  display: flex;
+  position: relative;
+}
+.info .info1::before, .info .info0::before, .info .info1::after, .info .info0::after {
+  content: "";
+  display: block;
+  background-color: rgb(243, 243, 243);
+  position: absolute;
+  border: none;
+  border-radius: 6px 30px;
+  width: 80px;
+  height: 40px;
+  transition: 1s;
+  z-index: 1;
+}
+.info .info1::before, .info .info0::before {
+  border-top: 8px solid rgb(203, 203, 203);
+  border-right: 8px solid rgb(203, 203, 203);
+  top: -8px;
+  right: -8px;
+}
+.info .info1::after, .info .info0::after {
+  border-bottom: 8px solid rgb(203, 203, 203);
+  border-left: 8px solid rgb(203, 203, 203);
+  bottom: -8px;
+  left: -8px;
+  z-index: 1;
+}
+.info .info1:hover, .info .info0:hover {
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  transform: scaleX(0.99);
+  background-color: white;
+}
+.info .info1:hover::before, .info .info0:hover::before, .info .info1:hover::after, .info .info0:hover::after {
+  width: 160px;
+  height: 80px;
+  background-color: white;
+}
+.info .info1:hover::before, .info .info0:hover::before {
+  border-top: 8px solid rgb(240, 125, 141);
+  border-right: 8px solid rgb(240, 125, 141);
+  z-index: -1;
+}
+.info .info1:hover::after, .info .info0:hover::after {
+  border-bottom: 8px solid rgb(240, 125, 141);
+  border-left: 8px solid rgb(240, 125, 141);
+  z-index: -1;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.info {
+  max-width: 1100px;
+  margin: 170px auto;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-family: "OTWelcomeRA";
+  color: rgb(69, 69, 69);
+  padding: 0 1vw;
+}
+.info h2 {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  color: rgb(240, 125, 141);
+}
+.info .info0 {
+  margin: 10px 0 100px;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 250px;
+  padding: 40px 20px;
+}
+.info .info0 .WLPER {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  padding-left: 2vw;
+}
+.info .info0 .WLPER div {
+  text-align: center;
+  width: 50%;
+}
+.info .info0 .WLPER div p {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+.info .info0 .WLPER div .recentWL {
+  font-size: 20px;
+}
+.info .info0 .WLPER div .recentKD span {
+  font-size: 16px;
+  width: 35px;
+  color: red;
+}
+.info .info0 .WLPER div .recentKDV {
+  color: rgb(255, 106, 106);
+  font-size: 14px;
+}
+.info .info0 .WLPER .pie-chart {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: conic-gradient(#5383E8 0% 100%, #E84057 100% 100%);
+  transform: translateY(0px);
+  transition: 1s;
+}
+.info .info0 .WLPER .pie-chart h4 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -220%);
+}
+.info .info0 .WLPER .pie-chart .center {
+  background: rgb(240, 240, 240);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 85px;
+  font-size: 20px;
+  color: #5383E8;
+  transform: translate(-50%, -50%);
+}
+.info .info0 .mainInfo {
+  width: 19%;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  padding-left: 2vw;
+}
+.info .info0 .mainInfo p {
+  margin: 20px 0;
+}
+.info .info0 .mainPosition {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  height: 70%;
+  position: relative;
+  padding-top: 20px;
+}
+.info .info0 .mainPosition h4 {
+  position: absolute;
+  top: 0;
+  transform: translateY(-140%);
+}
+.info .info0 .mainPosition div {
+  width: 20px;
+  height: 80%;
+  position: relative;
+  background-color: #b8b8b8;
+}
+.info .info0 .mainPosition div svg {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(110%) translateX(-3px);
+  z-index: 5;
+}
+.info .info0 .mainPosition div p {
+  position: absolute;
+  bottom: -70%;
+  left: 0%;
+  width: 65px;
+  height: 22px;
+  border-radius: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d2d2d;
+  display: none;
+  color: white;
+  transform: translateX(-32%);
+  font-size: 13px;
+  opacity: 0.7;
+}
+.info .info0 .mainPosition div p::after {
+  border-bottom: 5px solid #2d2d2d;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-60%) translateY(-100%);
+}
+.info .info0 .mainPosition div span {
+  display: block;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(240, 125, 141);
+  position: absolute;
+  bottom: 0;
+  border: none;
+  transition: 1s;
+}
+.info .info1 {
+  justify-content: space-between;
+  height: 450px;
+  margin: 10px 0 100px;
+}
+.info .info1 .matchinfoCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 44%;
+  height: 100%;
+}
+.info .info1 .matchinfoCon .matchinfo {
+  width: 99%;
+  height: 48%;
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 25px;
+  color: rgb(50, 50, 50);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.info .info1 .matchinfoCon .matchinfo span {
+  background-color: transparent;
+  position: absolute;
+  border-radius: 6px 27px;
+  border: 0;
+  width: 0px;
+  height: 0px;
+  transition: width 1s, height 1s;
+}
+.info .info1 .matchinfoCon .matchinfo span:nth-child(1) {
+  border-top: 0;
+  border-right: 0;
+  top: -6px;
+  right: -5px;
+  transform-origin: left;
+}
+.info .info1 .matchinfoCon .matchinfo span:nth-child(2) {
+  border-bottom: 0;
+  border-left: 0;
+  bottom: -6px;
+  left: -5px;
+}
+.info .info1 .matchinfoCon .matchinfo .RankCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.info .info1 .matchinfoCon .matchinfo .RankCon h3 {
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.info .info1 .matchinfoCon .matchinfo .RankCon img {
+  width: 90px;
+}
+.info .info1 .matchinfoCon .matchinfo div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.info .info1 .matchinfoCon .matchinfo div li {
+  text-align: left;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(50, 50, 50);
+}
+.info .info1 .matchinfoCon .matchinfo div li .tierImg {
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+}
+.info .info1 .likeChamp {
+  width: 55%;
+  height: 100%;
+  padding: 35px 25px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 25px;
+  color: rgb(50, 50, 50);
+  position: relative;
+}
+.info .info1 .likeChamp li {
+  text-align: left;
+  height: 43px;
+  margin: 20px 5px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(50, 50, 50);
+  position: relative;
+  cursor: pointer;
+}
+.info .info1 .likeChamp li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 0 15px;
+  transition: 0.5s;
+}
+.info .info1 .likeChamp li h4 {
+  width: 28%;
+  padding-left: 10px;
+  transition: 0.5s;
+}
+.info .info1 .likeChamp li p {
+  font-size: 12px;
+  width: 30%;
+  text-align: center;
+}
+.info .info1 .likeChamp .top {
+  width: 100%;
+  display: flex;
+  margin: 10px 0 30px;
+}
+.info .info1 .likeChamp .top p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.info .info1 .likeChamp .top p:nth-child(1) {
+  width: 40%;
+}
+.info .info1 .likeChamp .top p:nth-child(2) {
+  width: 30%;
+}
+.info .info1 .likeChamp .top p:nth-child(3) {
+  width: 30%;
+}
+.info .info2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+}
+.info .info2 h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px;
+}
+.info .info2 .matchCon {
+  width: 100%;
+  padding: 5px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 0;
+  opacity: 1;
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+}
+.info .info2 .matchCon .match {
+  font-size: 15px;
+  width: 51%;
+  height: 200px;
+  padding: 0.5vw;
+  display: flex;
+  align-items: center;
+}
+.info .info2 .matchCon .match .matchInfo1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.info .info2 .matchCon .match .matchInfo1 li {
+  font-size: 13px;
+  display: flex;
+  height: 20px;
+}
+.info .info2 .matchCon .match .matchInfo1 li:nth-child(2) {
+  position: relative;
+  align-items: top;
+  margin-bottom: 40px;
+}
+.info .info2 .matchCon .match .matchInfo1 li:nth-child(2)::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  background: rgb(116, 116, 116);
+}
+.info .info2 .matchCon .match .matchInfo1 .YouWin {
+  font-weight: bolder;
+  color: rgb(0, 0, 255);
+}
+.info .info2 .matchCon .match .matchInfo1 .YouLose {
+  font-weight: bolder;
+  color: rgb(255, 0, 0);
+}
+.info .info2 .matchCon .match .matchInfo1 .matchID {
+  color: var(--match-font);
+}
+.info .info2 .matchCon .match figure {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1vw;
+}
+.info .info2 .matchCon .match figure .lane {
+  margin: 20px 0;
+}
+.info .info2 .matchCon .match figure .Pickchamp {
+  border-radius: 100%;
+  width: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.info .info2 .matchCon .match figure .Pickchamp:hover {
+  transform: scale(1.05);
+}
+.info .info2 .matchCon .match figure .champLevel {
+  position: absolute;
+  bottom: 30px;
+  left: 74%;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(70, 70, 70);
+  padding: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+.info .info2 .matchCon .match .matchInfo2 {
+  max-width: 210px;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 1.5vw;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells {
+  width: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells figure {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: 0.6s;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells figure:hover img {
+  transform: scale(1.05);
+}
+.info .info2 .matchCon .match .matchInfo2 .spells figure:nth-child(1) figcaption {
+  width: 64px;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells figure figcaption {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  background: #383838;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -7px;
+  transform: translateY(105%);
+  color: white;
+  display: none;
+  line-height: 150%;
+  opacity: 0.9;
+  z-index: 4;
+  font-size: 12px;
+  border: none;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells figure figcaption::after {
+  border-bottom: var(--after-width) solid #383838;
+  border-left: var(--after-width) solid transparent;
+  border-right: var(--after-width) solid transparent;
+  border-top: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-60%) translateY(-100%);
+}
+.info .info2 .matchCon .match .matchInfo2 .spells figure:hover figcaption {
+  display: flex;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells .spell {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  margin: 2px 2px 0 0;
+  transition: 0.3s;
+}
+.info .info2 .matchCon .match .matchInfo2 .spells .rune {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  margin: 2px 2px 0 0;
+  transition: 0.3s;
+}
+.info .info2 .matchCon .match .matchInfo2 .KD {
+  width: 140px;
+  text-align: center;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--match-font);
+}
+.info .info2 .matchCon .match .matchInfo2 .KD span {
+  color: red;
+  font-size: 14px;
+}
+.info .info2 .matchCon .match .matchInfo2 .KD p {
+  margin: 0;
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems {
+  font-size: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 3px;
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems figure {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems figure img {
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems figure img:hover {
+  transform: scale(1.1);
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems figure p {
+  width: 110px;
+  height: 30px;
+  padding: 0px;
+  background: #383838;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -7px;
+  transform: translateY(105%);
+  color: white;
+  line-height: 150%;
+  display: none;
+  opacity: 0.8;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems figure p::after {
+  border-bottom: 5px solid #383838;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-60%) translateY(-100%);
+}
+.info .info2 .matchCon .match .matchInfo2 .myItems figure:hover p {
+  display: block;
+}
+.info .info2 .matchCon .match .matchInfo3 {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 13px;
+}
+.info .info2 .matchCon .match .matchInfo3 .killPer {
+  color: red;
+  background: #a3374b;
+}
+.info .info2 .matchCon .matchList {
+  width: 49%;
+  height: 220px;
+  padding: 0.5vw 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.info .info2 .matchCon .matchList .matchplayer {
+  font-size: 12px;
+  width: 49%;
+  height: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 1px 0;
+  padding-right: 5px;
+  margin-bottom: 3px;
+}
+.info .info2 .matchCon .matchList .matchplayer p {
+  width: 31%;
+  word-spacing: -3px;
+}
+.info .info2 .matchCon .matchList .matchplayer img {
+  width: 27px;
+  height: 27px;
+  margin-left: 4px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .info {
+    padding: 0 4vw 50px;
+  }
+  .info .info0 {
+    padding: 40px 10px;
+  }
+  .info .info0 .userMainInfo {
+    width: 64%;
+  }
+  .info .info0 .userMainInfo .IDLV p {
+    font-size: 17px;
+  }
+  .info .info0 .userMainInfo div:nth-child(2) {
+    transform: scale(0.8) translateX(-5px);
+  }
+  .info .info0 .likePosition {
+    width: 35%;
+  }
+  .info .info1 .RankInfoCon {
+    width: 50%;
+  }
+  .info .info1 .likeChamp {
+    width: 50%;
+  }
+  .info .info1 .likeChamp::before {
+    left: 0%;
+  }
+  .info .info2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+  }
+  .info .info2 h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px;
+  }
+  .info .info2 .matchCon {
+    width: 100%;
+    height: 550px;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .info .info2 .matchCon .match {
+    font-size: 15px;
+    width: 100%;
+    height: 200px;
+    padding: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .info .info2 .matchCon .match .matchInfo1 {
+    width: 13%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .info .info2 .matchCon .match .matchInfo1 li {
+    font-size: 16px;
+    display: flex;
+    height: 20px;
+  }
+  .info .info2 .matchCon .match .matchInfo1 li:nth-child(2) {
+    position: relative;
+    align-items: top;
+    margin-bottom: 40px;
+  }
+  .info .info2 .matchCon .match .matchInfo1 li:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    background: rgb(159, 159, 159);
+  }
+  .info .info2 .matchCon .match .matchInfo1 .matchID {
+    color: var(--match-font);
+  }
+  .info .info2 .matchCon .match .matchInfo2 {
+    max-width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 1.5vw;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transition: 0.6s;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure:hover img {
+    transform: scale(1.05);
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure:nth-child(1) figcaption {
+    width: 156px;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure .spell {
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    margin: 2px 2px 0 0;
+    transition: 0.3s;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure figcaption {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    background: #383838;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -7px;
+    transform: translateY(105%);
+    color: white;
+    display: none;
+    line-height: 150%;
+    opacity: 0.9;
+    z-index: 4;
+    font-size: 12px;
+    border: none;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure figcaption::after {
+    border-bottom: 5px solid #383838;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-top: 0px solid rgba(255, 255, 255, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .info .info2 .matchCon .match .matchInfo2 .spells figure:hover figcaption {
+    display: flex;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .KD {
+    width: 200px;
+    padding-top: 10px;
+    font-size: 16px;
+    color: var(--match-font);
+  }
+  .info .info2 .matchCon .match .matchInfo2 .KD span {
+    color: red;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .KD p {
+    margin: 0;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems {
+    font-size: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 3px;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems figure {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems figure img {
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems figure img:hover {
+    transform: scale(1.1);
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems figure figcaption {
+    height: 30px;
+    padding: 0px;
+    background: #383838;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 12px;
+    display: none;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    transform: translateY(120%);
+    opacity: 0.9;
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems figure figcaption::after {
+    border-bottom: 5px solid #383838;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-top: 0px solid rgba(255, 255, 255, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .info .info2 .matchCon .match .matchInfo2 .myItems figure:hover figcaption {
+    display: block;
+  }
+  .info .info2 .matchCon .match .matchInfo3 {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 16px;
+    padding-left: 4vw;
+  }
+  .info .info2 .matchCon .match .matchInfo3 .killPer {
+    color: red;
+    background: #a3374b;
+  }
+  .info .info2 .matchCon .match figure {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4vw 0 0;
+  }
+  .info .info2 .matchCon .match figure .lane {
+    margin: 10px 0;
+  }
+  .info .info2 .matchCon .match figure .Pickchamp {
+    border-radius: 100%;
+    width: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .info .info2 .matchCon .match figure .champLevel {
+    position: absolute;
+    bottom: 30px;
+    left: 74%;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(70, 70, 70);
+    padding: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: 0.6s;
+  }
+  .info .info2 .matchCon .match figure:hover .Pickchamp {
+    transform: scale(1.05);
+    border-radius: 5px;
+  }
+  .info .info2 .matchCon .match figure:hover .champLevel {
+    bottom: 0;
+    left: 80%;
+  }
+  .info .info2 .matchCon .matchList {
+    margin-top: 20px;
+    width: 100%;
+    height: 290px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: #7e7e7e 1px solid;
+    border-radius: 0;
+  }
+  .info .info2 .matchCon .matchList .matchplayer {
+    font-size: 15px;
+    width: 49%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 1px 0;
+    padding-right: 5px;
+    margin-bottom: 3px;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(1) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(1) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(1) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(2) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(2) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(2) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(3) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(3) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(3) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(4) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(4) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(4) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(5) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(5) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .matchList .matchplayer:nth-child(5) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .matchList .matchplayer p {
+    width: 31%;
+    word-spacing: -2px;
+  }
+  .info .info2 .matchCon .matchList .matchplayer img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .info .info2 .matchCon .matchList .matchplayer img:hover {
+    transform: scale(1.05);
+  }
+}
+@media (min-width: 240px) and (max-width: 768px) {
+  .info {
+    margin-top: 190px;
+    display: flex;
+    justify-content: center;
+  }
+  .info .info0 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    height: 390px;
+    align-items: center;
+  }
+  .info .info0 .mainInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 160px;
+    padding-left: 20px;
+  }
+  .info .info0 .mainInfo p {
+    width: 100%;
+    text-align: left;
+    font-size: calc(9px + 1vw);
+    margin: 15px 0;
+  }
+  .info .info0 .WLPER {
+    width: 60%;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+  .info .info0 .WLPER div {
+    text-align: center;
+    width: 50%;
+    transform: scale(0.9);
+  }
+  .info .info0 .WLPER div p {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  .info .info0 .WLPER div:nth-child(1) {
+    transform: scale(0.8) translateX(0px);
+  }
+  .info .info0 .WLPER div:nth-child(2) {
+    transform: scale(0.8) translateX(-14px);
+  }
+  .info .info0 .WLPER div .recentWL {
+    font-size: calc(10px + 1vw);
+  }
+  .info .info0 .WLPER div .recentKD, .info .info0 .WLPER div .recentKDP {
+    font-size: calc(10px + 1vw);
+  }
+  .info .info0 .WLPER div .recentKD span, .info .info0 .WLPER div .recentKDP span {
+    font-size: calc(10px + 1vw);
+    width: 35px;
+    color: red;
+  }
+  .info .info0 .WLPER div .recentKDV {
+    color: rgb(255, 106, 106);
+    font-size: calc(10px + 1vw);
+  }
+  .info .info0 .mainPosition {
+    width: 100%;
+    display: flex;
+    height: 130px;
+    position: relative;
+    padding-top: 10px;
+    margin-top: 45px;
+  }
+  .info .info0 .mainPosition h4 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: calc(10px + 1vw);
+    transform: translateY(-140%) translateX(-50%);
+  }
+  .info .info0 .mainPosition div {
+    width: 20px;
+    height: 70%;
+    position: relative;
+    background-color: rgb(161, 161, 161);
+    transition: 0.5s;
+  }
+  .info .info0 .mainPosition div p {
+    position: absolute;
+    bottom: -62%;
+    left: 0%;
+    width: 65px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px 5px;
+    background-color: #4d4d4d;
+    display: none;
+    color: white;
+    transform: translateX(-32%);
+    font-size: 13px;
+    opacity: 0.7;
+  }
+  .info .info0 .mainPosition div p::after {
+    border-bottom: 5px solid #2d2d2d;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-top: 0px solid rgba(255, 255, 255, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .info .info0 .mainPosition div span {
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: #5383E8;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    transition: 1s;
+  }
+  .info .info0 .mainPosition div:hover p {
+    display: block;
+  }
+  .info .info0 .mainPosition .svg {
+    transform: translateY(0px);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .info .info1 {
+    flex-direction: column;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+  .info .info1 .RankInfoCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 270px;
+    transition: 1s;
+    padding-top: 10px;
+  }
+  .info .info1 .RankInfoCon .RankInfo {
+    width: 99%;
+    height: 130px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 25px;
+    color: rgb(50, 50, 50);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+  .info .info1 .RankInfoCon .RankInfo figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    z-index: 4;
+  }
+  .info .info1 .RankInfoCon .RankInfo figure figcaption {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .info .info1 .RankInfoCon .RankInfo figure img {
+    position: relative;
+    width: 60px;
+    z-index: 10;
+  }
+  .info .info1 .RankInfoCon .RankInfo ul {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .info .info1 .RankInfoCon .RankInfo ul li {
+    text-align: left;
+    height: 30px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: calc(9px + 1vw);
+    color: rgb(50, 50, 50);
+    word-spacing: 3px;
+  }
+  .info .info1 .RankInfoCon .RankInfo ul li .tierImg {
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+  }
+  .info .info1 .likeChamp {
+    width: 100%;
+    height: 400px;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 25px;
+    color: rgb(50, 50, 50);
+    position: relative;
+    margin-top: 50px;
+    background-color: rgb(243, 243, 243);
+    transition: 1s;
+  }
+  .info .info1 .likeChamp h3 {
+    font-size: 23px;
+    text-align: center;
+    margin: 5px 0 30px;
+  }
+  .info .info1 .likeChamp li {
+    text-align: left;
+    height: 43px;
+    margin: 16px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .info .info1 .likeChamp li:hover img {
+    transform: scale(1.1);
+  }
+  .info .info1 .likeChamp li:hover h4 {
+    color: #5383E8;
+  }
+  .info .info1 .likeChamp li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 0 15px;
+    transition: 0.5s;
+    position: relative;
+  }
+  .info .info1 .likeChamp li h4 {
+    width: 28%;
+    padding-left: 10px;
+    transition: 0.5s;
+  }
+  .info .info1 .likeChamp li p {
+    font-size: 12px;
+    width: 30%;
+    text-align: center;
+  }
+  .info .info1 .likeChamp .top {
+    width: 100%;
+    display: flex;
+    margin: 10px 0 30px;
+    z-index: 10;
+  }
+  .info .info1 .likeChamp .top p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .info .info1 .likeChamp .top p:nth-child(1) {
+    width: 40%;
+  }
+  .info .info1 .likeChamp .top p:nth-child(2) {
+    width: 30%;
+  }
+  .info .info1 .likeChamp .top p:nth-child(3) {
+    width: 30%;
+  }
+  .info .info1 .RankInfoCon, .info .info1 .likeChamp {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+    border-radius: 25px;
+    background-color: rgb(243, 243, 243);
+  }
+  .info .info1 .RankInfoCon::before, .info .info1 .RankInfoCon::after, .info .info1 .likeChamp::before, .info .info1 .likeChamp::after {
+    content: "";
+    display: block;
+    background-color: rgb(243, 243, 243);
+    position: absolute;
+    border-radius: 6px 27px;
+    width: 80px;
+    height: 40px;
+    transition: 1s;
+  }
+  .info .info1 .RankInfoCon::before, .info .info1 .likeChamp::before {
+    border-top: 6px solid rgb(203, 203, 203);
+    border-right: 6px solid rgb(203, 203, 203);
+    z-index: -1;
+    top: -6px;
+    right: -6px;
+  }
+  .info .info1 .RankInfoCon::after, .info .info1 .likeChamp::after {
+    border-bottom: 6px solid rgb(203, 203, 203);
+    border-left: 6px solid rgb(203, 203, 203);
+    bottom: -6px;
+    left: -6px;
+    z-index: 0;
+  }
+  .info .info1::before, .info .info1::after {
+    display: none;
+  }
+  .info .info1:hover {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+  }
+  .info .info1:hover .RankInfoCon, .info .info1:hover .likeChamp {
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+  }
+  .info .info1:hover .RankInfoCon::before, .info .info1:hover .RankInfoCon::after, .info .info1:hover .likeChamp::before, .info .info1:hover .likeChamp::after {
+    width: 160px;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+  }
+  .info .info1:hover .RankInfoCon::before, .info .info1:hover .likeChamp::before {
+    border-top: 6px solid rgb(240, 125, 141);
+    border-right: 6px solid rgb(240, 125, 141);
+    z-index: -1;
+  }
+  .info .info1:hover .RankInfoCon::after, .info .info1:hover .likeChamp::after {
+    border-bottom: 6px solid rgb(240, 125, 141);
+    border-left: 6px solid rgb(240, 125, 141);
+    z-index: -1;
+  }
+  .info .info1:hover::before, .info .info1:hover::after {
+    display: none;
+  }
+  .info .info2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 0;
+  }
+  .info .info2 h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px;
+  }
+  .info .info2 .matchCon {
+    width: auto;
+    height: 510px;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .info .info2 .matchCon .matchInfo {
+    font-size: 12px;
+    width: 100%;
+    height: 170px;
+    padding: 0.5vw;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .info .info2 .matchCon .matchInfo .MI1 {
+    width: calc(34px + 5vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .info .info2 .matchCon .matchInfo .MI1 li {
+    font-size: 12px;
+    display: flex;
+    height: 20px;
+  }
+  .info .info2 .matchCon .matchInfo .MI1 li:nth-child(2) {
+    position: relative;
+    align-items: top;
+    margin-bottom: 20px;
+  }
+  .info .info2 .matchCon .matchInfo .MI1 li:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    background: rgb(159, 159, 159);
+  }
+  .info .info2 .matchCon .matchInfo .MI1 .matchID {
+    color: var(--match-font);
+  }
+  .info .info2 .matchCon .matchInfo .MI2 {
+    max-width: calc(50px + 40vw);
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 2vw;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure {
+    margin: 0;
+    width: calc(27px + 3vw);
+    height: calc(27px + 3vw);
+    position: relative;
+    transition: 0.6s;
+    margin: 0 0.8vw;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure:hover img {
+    transform: scale(1.05);
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure:nth-child(1) figcaption {
+    width: 156px;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure img {
+    width: calc(29px + 1vw);
+    height: calc(29px + 1vw);
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure figcaption {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    background: #383838;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -7px;
+    transform: translateY(105%);
+    color: white;
+    display: none;
+    line-height: 150%;
+    opacity: 0.9;
+    z-index: 4;
+    font-size: 12px;
+    border: none;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure figcaption::after {
+    border-bottom: 5px solid #383838;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-top: 0px solid rgba(255, 255, 255, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure:hover figcaption {
+    display: flex;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myKD {
+    width: 50%;
+    padding-top: 10px;
+    font-size: 12px;
+    color: var(--match-font);
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myKD span {
+    color: red;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myKD p {
+    margin: 0;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem {
+    font-size: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2px;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem figure {
+    margin: 0;
+    width: calc(23px + 2vw);
+    height: calc(23px + 2vw);
+    position: relative;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem figure img {
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem figure img:hover {
+    transform: scale(1.1);
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem figure figcaption {
+    height: 30px;
+    padding: 0px;
+    background: #383838;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 12px;
+    display: none;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    transform: translateY(120%);
+    z-index: 9;
+    opacity: 0.9;
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem figure figcaption::after {
+    border-bottom: 5px solid #383838;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-top: 0px solid rgba(255, 255, 255, 0);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .info .info2 .matchCon .matchInfo .MI2 .myItem figure:hover figcaption {
+    display: block;
+  }
+  .info .info2 .matchCon .matchInfo .MI3 {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 12px;
+    padding-left: 4vw;
+    transform: translateY(17px);
+  }
+  .info .info2 .matchCon .matchInfo .MI3 li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+  }
+  .info .info2 .matchCon .matchInfo .MI3 .killPer {
+    color: red;
+    background: #a3374b;
+  }
+  .info .info2 .matchCon .matchInfo figure {
+    position: relative;
+    width: calc(60px + 3vw);
+    height: calc(60px + 3vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1% 0;
+  }
+  .info .info2 .matchCon .matchInfo figure .lane {
+    margin: 10px 0;
+  }
+  .info .info2 .matchCon .matchInfo figure .Pickchamp {
+    border-radius: 100%;
+    width: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .info .info2 .matchCon .matchInfo figure .champLevel {
+    position: absolute;
+    bottom: 10px;
+    left: 74%;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(70, 70, 70);
+    padding: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: 0.6s;
+  }
+  .info .info2 .matchCon .matchInfo figure:hover .Pickchamp {
+    transform: scale(1.05);
+    border-radius: 5px;
+  }
+  .info .info2 .matchCon .matchInfo figure:hover .champLevel {
+    bottom: 0;
+    left: 80%;
+  }
+  .info .info2 .matchCon .matchInfo::after {
+    content: "";
+    display: block;
+    background-color: rgb(153, 153, 153);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transition: 1s;
+  }
+  .info .info2 .matchCon .participantsList {
+    margin-top: 74px;
+    width: 100%;
+    height: 250px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-top: rgb(153, 153, 153) 2px solid;
+    border-radius: 0;
+  }
+  .info .info2 .matchCon .participantsList .participants {
+    font-size: 11px;
+    width: 49.5%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 1px 0;
+    padding-right: 5px;
+    margin-bottom: 3px;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(1), .info .info2 .matchCon .participantsList .participants:nth-child(2), .info .info2 .matchCon .participantsList .participants:nth-child(3), .info .info2 .matchCon .participantsList .participants:nth-child(4), .info .info2 .matchCon .participantsList .participants:nth-child(5) {
+    justify-content: left;
+    padding-left: calc(12vw + 40px);
+    position: relative;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) p, .info .info2 .matchCon .participantsList .participants:nth-child(2) p, .info .info2 .matchCon .participantsList .participants:nth-child(3) p, .info .info2 .matchCon .participantsList .participants:nth-child(4) p, .info .info2 .matchCon .participantsList .participants:nth-child(5) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) img, .info .info2 .matchCon .participantsList .participants:nth-child(2) img, .info .info2 .matchCon .participantsList .participants:nth-child(3) img, .info .info2 .matchCon .participantsList .participants:nth-child(4) img, .info .info2 .matchCon .participantsList .participants:nth-child(5) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .participantsList .participants p {
+    width: 31%;
+    word-spacing: -3px;
+  }
+  .info .info2 .matchCon .participantsList .participants img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .info .info2 .matchCon .participantsList .participants img:hover {
+    transform: scale(1.05);
+  }
+}/*# sourceMappingURL=search.css.map */

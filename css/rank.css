@@ -1,0 +1,305 @@
+@import url("./header.css");
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OTWelcomeRA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.Ranking {
+  max-width: 1100px;
+  margin: 170px auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: "OTWelcomeRA";
+  color: rgb(69, 69, 69);
+}
+.Ranking h2 {
+  text-align: center;
+  display: block;
+  margin-bottom: 40px;
+  font-size: 40px;
+  letter-spacing: 4px;
+  color: #f07d8d;
+}
+.Ranking .leagueList {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 50px 0px;
+}
+.Ranking .leagueList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 11%;
+  cursor: pointer;
+  color: rgb(78, 78, 78);
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.Ranking .leagueList li:hover {
+  box-shadow: -2px -2px 5px rgb(255, 255, 255), 2px 2px 5px #BABECC;
+}
+.Ranking .leagueList li:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px rgb(255, 255, 255);
+}
+.Ranking .leagueList li.active {
+  background-color: #5766a8;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(1) {
+  background-color: #c7c5b5;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(2) {
+  background-color: #de4040;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(3) {
+  background-color: #9240de;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(4) {
+  background-color: #aface8;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(5) {
+  background-color: #89ce9f;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(6) {
+  background-color: goldenrod;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(7) {
+  background-color: silver;
+  color: white;
+}
+.Ranking .leagueList li.active:nth-child(8) {
+  background-color: rgb(161, 112, 27);
+  color: white;
+}
+.Ranking .division {
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  margin: 40px 50px;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.Ranking .division li {
+  text-align: center;
+  width: 9%;
+  cursor: pointer;
+  margin: 0 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(138, 138, 138);
+  padding: 8px 0;
+  border-radius: 10px;
+}
+.Ranking .division li:hover {
+  box-shadow: -2px -2px 5px rgb(255, 255, 255), 2px 2px 5px #BABECC;
+}
+.Ranking .division li:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px rgb(255, 255, 255);
+}
+.Ranking .division li.active {
+  background-color: #5766a8;
+  color: white;
+}
+.Ranking .Rankers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto 50px;
+  color: rgb(48, 48, 48);
+  background-color: rgba(243, 244, 243, 0.8);
+  box-shadow: -1px -1px 10px rgb(255, 255, 255), 1px 1px 10px #BABECC;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.Ranking .Rankers li {
+  width: 95%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin: 5px 0;
+  box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  transition: 1s;
+  background-color: rgb(255, 255, 255);
+}
+.Ranking .Rankers li:nth-child(1) {
+  background-color: transparent;
+  box-shadow: none;
+}
+.Ranking .Rankers li:nth-child(2) .Rank {
+  color: black;
+  background: url("../img/crown.png") no-repeat;
+  background-size: 120px;
+  background-position: -6.5px -33px;
+  height: 30px;
+  width: 30px;
+  margin: 0 35px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Ranking .Rankers li:nth-child(2) .RankerName {
+  color: rgb(221, 158, 0);
+}
+.Ranking .Rankers li:nth-child(3) .Rank {
+  color: black;
+  background: url("../img/crown.png") no-repeat;
+  background-size: 120px;
+  background-position: -45.5px -33px;
+  height: 30px;
+  width: 30px;
+  margin: 0 35px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Ranking .Rankers li:nth-child(3) .RankerName {
+  color: rgb(164, 164, 164);
+}
+.Ranking .Rankers li:nth-child(4) .Rank {
+  color: black;
+  background: url("../img/crown.png") no-repeat;
+  background-size: 120px;
+  background-position: -83px -33px;
+  height: 30px;
+  width: 30px;
+  margin: 0 35px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Ranking .Rankers li:nth-child(4) .RankerName {
+  color: rgb(149, 82, 82);
+}
+.Ranking .Rankers li p {
+  display: block;
+  text-align: center;
+}
+.Ranking .Rankers li .Rank {
+  width: 100px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+}
+.Ranking .Rankers li .RankerName {
+  width: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+.Ranking .Rankers li .RankerName:hover {
+  font-size: 17px;
+  color: #b94f4f;
+}
+.Ranking .Rankers li .LP {
+  width: 13%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+}
+.Ranking .Rankers li .WL {
+  display: flex;
+  width: 15%;
+  color: white;
+  height: 25px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.Ranking .Rankers li .WL .win {
+  text-align: left;
+  padding-left: 5px;
+  background-color: #5383E8;
+  display: flex;
+  align-items: center;
+}
+.Ranking .Rankers li .WL .loss {
+  text-align: right;
+  padding-right: 5px;
+  background-color: #E84057;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.Ranking .Rankers li .Odds {
+  width: 12%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+}
+.Ranking .Rankers .topItem {
+  width: 100%;
+  height: 50px;
+  margin: 10px auto;
+  padding: 10px 0 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.Ranking .Rankers .topItem p {
+  text-align: center;
+}
+.Ranking .Rankers .topItem p:nth-child(1) {
+  width: 10%;
+}
+.Ranking .Rankers .topItem p:nth-child(2) {
+  width: 50%;
+  text-align: left;
+}
+.Ranking .Rankers .topItem p:nth-child(3) {
+  width: 13%;
+}
+.Ranking .Rankers .topItem p:nth-child(4) {
+  width: 15%;
+}
+.Ranking .Rankers .topItem p:nth-child(5) {
+  width: 12%;
+}
+
+.goTop {
+  background-color: rgb(240, 240, 240);
+  border-radius: 100%;
+  width: 45px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  position: fixed;
+  opacity: 0;
+  bottom: 50px;
+  right: 80px;
+  font-size: 1.7rem;
+  border: none;
+  cursor: pointer;
+}
+.goTop svg {
+  transform: scale(0.5);
+}/*# sourceMappingURL=rank.css.map */
