@@ -458,7 +458,7 @@
   display: flex;
   justify-content: space-around;
   padding: 15px;
-  border-bottom: 1px solid #5e5e5e;
+  border-bottom: 1px solid #919191;
 }
 .selectChamp .typeChamp li {
   width: 100px;
@@ -494,7 +494,7 @@
 }
 .selectChamp .champList li {
   padding: 2px 15px;
-  margin: 5px 6px;
+  margin: 4px 4px;
   height: 35px;
   display: flex;
   align-items: center;

@@ -1,7 +1,6 @@
-
 const goTop = document.querySelector(".goTop");
 const menubar = document.querySelector(".menu");
-const search = document.querySelector(".search");
+const searchC = document.querySelector(".search");
 const header = document.querySelector("header");
 
 goTop.addEventListener("click",() => {
@@ -11,17 +10,16 @@ goTop.addEventListener("click",() => {
 
 window.addEventListener("scroll", ()=>{
         if (scrollY > 100) {
+            console.log("aa")
             goTop.style = "opacity:1"
-            header.style = "transform:scaleY(0)";
-            search.classList.add("animate__fadeOut");
-            menubar.classList.add("animate__fadeOut");
+            header.style = "opacity:0; transform:scaleY(0)";
+            menubar.style = "opacity:0;transform:scaleY(0)";
+            searchC.style = "opacity:0;transform:scaleY(0)";
         } else{
             goTop.style = "opacity:0"
-            header.style = "transform:scaleY(1)";
-            menubar.classList.remove("animate__fadeOut");
-            menubar.classList.add("animate__fadeIn");
-            search.classList.remove("animate__fadeOut");
-            search.classList.add("animate__fadeIn");
+            header.style = "opacity:1;transform:scaleY(1)";
+            menubar.style = "opacity:1;transform:scaleY(1)";
+            searchC.style = "opacity:1;transform:scaleY(1)";
         }
     }
 )

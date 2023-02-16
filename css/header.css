@@ -34,9 +34,8 @@ header {
   height: 100px;
   z-index: 999;
   opacity: 0.9;
-  transition: opacity 0.5s;
+  transition: 0.5s;
   transform-origin: top;
-  overflow: hidden;
 }
 header .headerCon {
   display: flex;
@@ -58,7 +57,6 @@ header .headerCon .menu {
   justify-content: space-around;
   align-items: center;
   padding: 5px;
-  transition-delay: 0.5s;
 }
 header .headerCon .menu a {
   display: block;
@@ -77,11 +75,12 @@ header .headerCon .menu a {
 }
 header .headerCon .menu a:active, header .headerCon .menu a.active {
   width: 105px;
-  height: 45px;
+  height: 50px;
   box-shadow: inset 1px 1px 2px 2px #BABECC;
   background-color: rgb(254, 254, 254);
   color: rgb(240, 125, 141);
   font-weight: 700;
+  line-height: 50px;
 }
 header .headerCon .search {
   max-width: 30%;
@@ -91,7 +90,6 @@ header .headerCon .search {
   justify-content: center;
   align-items: center;
   transform-origin: top;
-  transition-delay: 0.5s;
 }
 header .headerCon .search .searchwrapper {
   position: relative;
@@ -147,13 +145,12 @@ header .headerCon .search .searchwrapper .search-inner.active {
   bottom: 0;
   width: 100%;
   height: auto;
-  transform: translateX(1%) translateY(101%);
+  transform: translateX(1%) translateY(102%);
 }
 header .headerCon .search .searchwrapper .search-inner.active #search-list {
   width: 98%;
   background-color: white;
   border-radius: 15px;
-  border: 1px solid rgb(108, 108, 108);
 }
 header .headerCon .search .searchwrapper .search-inner.active #search-list li {
   font-size: 14px;
