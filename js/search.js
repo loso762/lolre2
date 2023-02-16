@@ -138,7 +138,7 @@ async function PlzInfo(UID) {
 
                         //console.log(PARTY);
                         let matchUsers = PARTY.map((p) => {
-                            return `<li class="matchplayer">${p.summonerName}  <img src="./img/champion/${p.championName}.png" alt=""> <p> ${p.kills} / ${p.deaths} / ${p.assists}</p></li>`
+                            return `<li class="participants">${p.summonerName}  <img src="./img/champion/${p.championName}.png" alt=""> <p> ${p.kills} / ${p.deaths} / ${p.assists}</p></li>`
                         })
     
     ////검색 유저 정보
@@ -233,7 +233,7 @@ async function PlzInfo(UID) {
                     info2Data = (
                             `<div class="matchCon" id="${ENDTIME}" style="background:${teamColor}">
                                 <div class="match">
-                                    <ul class="matchInfo1">
+                                    <ul class="MI1">
                                         <li class="endPlay">${EndPlay(lasttime)}</li>
                                         <li class="matchID">${WhatMatchFn(matchInfo.info.queueId)}</li>
                                         ${win}
@@ -244,8 +244,8 @@ async function PlzInfo(UID) {
                                         <figcaption class="champLevel">${myplayer.champLevel}</figcaption>
                                         <p class="lane">${myplayer.teamPosition}</p>
                                     </figure>
-                                    <ul class="matchInfo2">
-                                        <li class="spells">
+                                    <ul class="MI2">
+                                        <li class="mySpell">
                                             <figure>
                                                 <img class="rune" src="./img/rune/${myRune1}.png">
                                                 <figcaption>${Rune1des}</figcaption>
@@ -263,16 +263,16 @@ async function PlzInfo(UID) {
                                             <figcaption>${spell1}</figcaption>
                                             </figure>
                                         </li>                        
-                                        <li class="KD">
+                                        <li class="myKD">
                                             <p>${KD}</p>
                                             <p>킬 관여 : ${KDV}%</p>
                                             <p>평점 : ${KDP}</p>                                
                                         </li>
-                                        <li class="myItems">
+                                        <li class="myItem">
                                             ${Items}
                                         </li>
                                     </ul>
-                                    <ul class="matchInfo3">
+                                    <ul class="MI3">
                                         <li class="damage">딜량 : ${damage}</li>
                                         <li class="damaged">피해량 : ${damaged}</li>
                                         <li class="ward">제어와드 : ${myplayer.visionWardsBoughtInGame}</li>
@@ -280,7 +280,7 @@ async function PlzInfo(UID) {
                                         
                                     </ul>
                                 </div>
-                                <ul class="matchList">${matchUsers}</ul>
+                                <ul class="participantsList">${matchUsers}</ul>
                     </div>` )
     
                         //매치 시간별로 정렬

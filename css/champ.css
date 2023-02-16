@@ -1,28 +1,7 @@
-@import url("./header.css");
-@font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-ul, li {
-  list-style: none;
-  margin: 10px 0;
-  padding: 0;
-}
-
-body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "GmarketSansMedium";
-}
-
 .Info {
   max-width: 1100px;
   padding: 50px 2vw 0;
-  margin: 70px auto 30px;
+  margin: 50px auto 30px;
   border: 0;
   outline: 0;
   border-radius: 10px;
@@ -34,12 +13,21 @@ body {
   color: rgb(240, 125, 141);
   font-size: 30px;
 }
-.Info a {
+.Info h3 {
+  color: rgb(240, 125, 141);
+  display: block;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 23px;
+}
+.Info .wikilink {
   text-decoration: none;
   color: #bb4545;
   position: absolute;
   top: -5px;
-  right: 2px;
+  right: 3px;
 }
 .Info .champInfo {
   display: flex;
@@ -48,113 +36,147 @@ body {
   position: relative;
   justify-content: space-around;
 }
-.Info .champInfo li {
+.Info .champInfo article {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   margin: 30px 0;
+  background-color: white;
   color: rgb(78, 78, 78);
-  background: rgb(255, 255, 255);
   font-family: "GmarketSansMedium";
+  border: 0;
+  outline: 0;
+  border-radius: 15px;
+  box-shadow: -3px -3px 11px #FFF, 2px 2px 12px #BABECC;
 }
-.Info .champInfo li h3 {
-  font-size: 21px;
-}
-.Info .champInfo .image {
+.Info .champInfo .mainInfo {
   width: 100%;
   order: 0;
   justify-content: left;
   margin-bottom: 0;
-  border: none;
-  border-radius: 15px 15px 0 0;
-  padding: 30px;
-  position: relative;
+  padding: 40px 20px 20px;
 }
-.Info .champInfo .image img {
+.Info .champInfo .mainInfo figure {
+  position: relative;
+  width: 100%;
+}
+.Info .champInfo .mainInfo figure img {
   width: 240px;
   height: 240px;
   border-radius: 4px;
   cursor: pointer;
   color: #73d5d5;
 }
-.Info .champInfo .image span {
-  z-index: 99;
-  position: absolute;
-  bottom: 36px;
-  left: 120px;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
+.Info .champInfo .mainInfo figure figcaption {
+  margin: 60px 0 10px;
+  line-height: 30px;
+  font-size: 18px;
+  word-break: keep-all;
+  line-height: 170%;
+  font-size: 15px;
 }
-.Info .champInfo .skins {
-  overflow: hidden;
-  margin: 0;
-  transition: 0.5s;
-  width: 100%;
-  height: 0;
-  padding: 0;
+.Info .champInfo .mainInfo figure figcaption.active {
+  margin: 30px 0 10px;
 }
-.Info .champInfo .skins figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 12px;
-  width: 25%;
-  margin: 20px 0;
-}
-.Info .champInfo .skins figure img {
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-.Info .champInfo .skins figure figcaption {
-  padding: 0 20px;
-}
-.Info .champInfo .skins .skin {
-  width: 120px;
-  height: 120px;
-}
-.Info .champInfo .skins.active {
-  height: auto;
-  padding: 20px 0;
-}
-.Info .champInfo .name {
-  order: 1;
+.Info .champInfo .mainInfo figure .name {
   position: absolute;
   background-color: transparent;
-  top: 35px;
-  left: 300px;
+  top: 10px;
+  left: 290px;
   font-size: 25px;
   line-height: 30px;
   font-weight: bolder;
   color: #374999;
 }
-.Info .champInfo .title {
-  order: 2;
-  max-width: 300px;
-  line-height: 30px;
+.Info .champInfo .mainInfo figure span {
+  z-index: 9;
   position: absolute;
-  top: 35px;
-  font-size: 25px;
-  font-weight: bold;
-  background-color: transparent;
-  color: #374999;
+  top: 210px;
+  left: 95px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
 }
-.Info .champInfo .tags {
-  order: 3;
+.Info .champInfo .mainInfo figure .skins {
+  margin: 10px 0;
+  transition: 0.5s;
+  width: 100%;
+  height: 0;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  overflow: hidden;
+  position: relative;
+  font-size: 0;
+}
+.Info .champInfo .mainInfo figure .skins div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  width: 20%;
+  margin: 15px 0;
+}
+.Info .champInfo .mainInfo figure .skins div img {
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+  margin-bottom: 1.4vw;
+}
+.Info .champInfo .mainInfo figure .skins div figcaption {
+  padding: 0 20px;
+}
+.Info .champInfo .mainInfo figure .skins .skin {
+  width: 120px;
+  height: 120px;
+}
+.Info .champInfo .mainInfo figure .skins .ULink {
   position: absolute;
-  top: 185px;
-  left: 300px;
-  width: 160;
+  height: 30px;
+  bottom: 0;
+  right: 0%;
+  transform: scale(0);
+  opacity: 0;
+  color: black;
+  transition: opacity 0.3s;
+}
+.Info .champInfo .mainInfo figure .skins .ULink:hover {
+  color: #bb4545;
+}
+.Info .champInfo .mainInfo figure .skins.active {
+  height: auto;
+  transition: 1s;
+  overflow: hidden;
+  padding: 10px 0 30px;
+  font-size: 0;
+}
+.Info .champInfo .mainInfo figure .skins.active a {
+  transform: scale(1) translateX(-5px);
+  opacity: 1;
+}
+.Info .champInfo .mainInfo .type {
+  position: absolute;
+  background-color: transparent;
+  top: 100px;
+  left: 315px;
+  color: #993737;
+}
+.Info .champInfo .mainInfo .tags {
+  position: absolute;
+  top: 150px;
+  left: 315px;
   height: auto;
   margin: 0;
   align-items: center;
   display: flex;
   justify-content: space-between;
   background-color: rgb(195, 195, 195);
-  font-size: 14px;
   color: rgb(255, 255, 255);
-  border-radius: 10px;
+  font-size: 14px;
+  border-radius: 15px;
 }
-.Info .champInfo .tags div {
+.Info .champInfo .mainInfo .tags figure {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -163,20 +185,18 @@ body {
   height: 105px;
   position: relative;
 }
-.Info .champInfo .tags div p {
-  width: 50px;
-  height: 70px;
+.Info .champInfo .mainInfo .tags figure p {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.Info .champInfo .tags div img {
+.Info .champInfo .mainInfo .tags figure img {
   margin: 15px 20px 5px;
   width: 50px;
   height: 50px;
   filter: brightness(0.9);
 }
-.Info .champInfo .tags div::before {
+.Info .champInfo .mainInfo .tags figure::before {
   content: "";
   display: block;
   width: 98%;
@@ -186,176 +206,187 @@ body {
   top: 35px;
   left: 1%;
 }
-.Info .champInfo .partype {
-  order: 4;
-  position: absolute;
-  background-color: transparent;
-  top: 95px;
-  left: 300px;
-  color: #993737;
-}
-.Info .champInfo .blurb {
-  order: 5;
+.Info .champInfo .mainInfo .tags figure figcaption {
+  display: block;
   width: 100%;
+  opacity: 0;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(164, 167, 173);
+  transform: translateY(10px);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.Info .champInfo .mainInfo .tags figure figcaption::after {
+  border-bottom: 5px solid rgb(164, 167, 173);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-60%) translateY(-100%);
+}
+.Info .champInfo .mainInfo .tags figure:hover figcaption {
+  opacity: 1;
+}
+.Info .champInfo .mainInfo .popup {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9137254902);
+  border-radius: 20px;
+  display: none;
+}
+.Info .champInfo .mainInfo .popup button {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  font-size: 35px;
+  transition: 0.5s;
+  background-color: transparent;
   border: none;
-  border-radius: 0 0 15px 15px;
-  margin-top: 0;
-  padding: 30px;
-  line-height: 30px;
+  font-size: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+.Info .champInfo .mainInfo .popup span {
+  position: absolute;
+  top: 30%;
+  font-size: 35px;
+  transition: 0.5s;
+  border: none;
+  font-size: 60px;
+  z-index: 10;
+  cursor: pointer;
+}
+.Info .champInfo .mainInfo .popup span:nth-child(1) {
+  left: 50%;
+  transform: translateX(-50%) translateY(-65px);
+  font-size: 40px;
+}
+.Info .champInfo .mainInfo .popup span:nth-child(2) {
+  left: 50%;
+  transform: translateX(-280px) translateY(165px);
+}
+.Info .champInfo .mainInfo .popup span:nth-child(3) {
+  left: 50%;
+  transform: translateX(245px) translateY(165px);
+}
+.Info .champInfo .mainInfo .popup span:hover {
+  color: #f07d8d;
+}
+.Info .champInfo .mainInfo .popup img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 390px;
+  border-radius: 10px;
+}
+.Info .champInfo .mainInfo .popup p {
+  position: absolute;
+  top: 30%;
+  left: 50%;
   font-size: 18px;
+  transform: translateX(-50%) translateY(410px);
 }
 .Info .champInfo .stats {
-  order: 6;
   width: 45%;
-  height: 350px;
+  height: 430px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
   padding: 10px 20px;
-  font-size: 15px;
 }
-.Info .champInfo .stats h3 {
-  color: #4253a0;
-  display: block;
-  width: 100%;
-  height: 15%;
-  text-align: center;
-  padding-top: 5px;
-}
-.Info .champInfo .stats p {
+.Info .champInfo .stats div {
   display: flex;
   width: 90%;
-  height: 10%;
+  height: 41px;
   margin: 0 auto;
 }
-.Info .champInfo .stats p span {
+.Info .champInfo .stats div figure {
   text-align: center;
   display: flex;
   justify-content: center;
   width: 55%;
   margin: 0;
 }
-.Info .champInfo .stats p span img {
+.Info .champInfo .stats div figure img {
   width: 20px;
   height: 20px;
   margin: 0 10px;
   filter: brightness(0.8);
 }
+.Info .champInfo .stats div figure figcaption {
+  width: 80px;
+}
 .Info .champInfo .info {
-  order: 7;
   flex-direction: column;
   width: 45%;
-  height: 350px;
-  border-radius: 15px;
+  height: 430px;
   padding: 10px 20px;
   text-align: center;
-}
-.Info .champInfo .info h3 {
-  color: #4253a0;
-  display: block;
-  width: 100%;
-  height: 15%;
-  padding-top: 10px;
 }
 .Info .champInfo .info div {
   display: flex;
   width: 100%;
   padding: 5px 0;
   margin: 0;
-  height: 20%;
+  height: 75px;
   align-items: center;
 }
 .Info .champInfo .info div p {
-  text-align: center;
-  display: block;
   width: 40%;
-  margin: 0;
   text-transform: uppercase;
 }
-.Info .champInfo .info div .infodiv {
+.Info .champInfo .info div span {
   width: 20px;
   height: 20px;
-  background: #8f97b4;
-  margin: 0 1px;
-}
-.Info .champInfo .skillh3 {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 20px 0;
-  font-size: 25px;
-  order: 8;
-  color: #f07d8d;
-}
-.Info .champInfo .passive {
-  order: 9;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  color: rgb(78, 78, 78);
-  border-radius: 15px;
-  padding: 10px 40px 20px;
-}
-.Info .champInfo .passive h4 {
-  color: #374999;
-  width: 100%;
-  margin: 10px 0 40px;
-  font-size: 21px;
+  background-color: #8f97b4;
   position: relative;
-}
-.Info .champInfo .passive h4::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: azure;
-  position: absolute;
-  bottom: -20px;
-  left: 0px;
-}
-.Info .champInfo .passive figure {
   display: flex;
-  align-items: center;
-}
-.Info .champInfo .passive figure img {
-  width: 64px;
-  height: 64px;
-  margin-right: 30px;
+  justify-content: left;
+  margin-right: 2px;
 }
 .Info .champInfo .spells {
-  order: 10;
   width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   color: rgb(78, 78, 78);
   padding: 10px 40px 60px;
-  border-radius: 15px;
 }
-.Info .champInfo .spells .spellBox {
+.Info .champInfo .spells .spellBox, .Info .champInfo .spells .passive {
   width: 100%;
   margin: 15px 0;
   padding: 10px 40px;
   color: rgb(78, 78, 78);
   background: rgb(240, 240, 240);
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid white;
   border-radius: 15px;
   transition: 0.5s;
+  position: relative;
 }
-.Info .champInfo .spells .spellBox:hover {
+.Info .champInfo .spells .spellBox:hover, .Info .champInfo .spells .passive:hover {
   border: 3px solid rgb(210, 210, 210);
 }
-.Info .champInfo .spells .spellBox:hover h4::after {
+.Info .champInfo .spells .spellBox:hover h4::after, .Info .champInfo .spells .passive:hover h4::after {
   background-color: rgb(210, 210, 210);
 }
-.Info .champInfo .spells .spellBox h4 {
+.Info .champInfo .spells .spellBox h4, .Info .champInfo .spells .passive h4 {
   margin: 10px 0 40px;
   font-size: 21px;
   position: relative;
   color: #374999;
 }
-.Info .champInfo .spells .spellBox h4::after {
+.Info .champInfo .spells .spellBox h4::after, .Info .champInfo .spells .passive h4::after {
   content: "";
   display: block;
   width: 100%;
@@ -366,71 +397,58 @@ body {
   left: 0px;
   transition: 0.5s;
 }
-.Info .champInfo .spells .spellBox figure {
+.Info .champInfo .spells .spellBox figure, .Info .champInfo .spells .passive figure {
   display: flex;
   align-items: center;
   margin: 20px 0;
 }
-.Info .champInfo .spells .spellBox figure img {
-  width: 64px;
-  height: 64px;
+.Info .champInfo .spells .spellBox figure img, .Info .champInfo .spells .passive figure img {
+  width: 68px;
+  height: 68px;
   margin-right: 30px;
+  border-radius: 4px;
 }
-.Info .champInfo .spells .spellBox div p {
+.Info .champInfo .spells .spellBox div p, .Info .champInfo .spells .passive div p {
   margin: 10px 0;
   font-size: 14px;
   word-spacing: 1px;
 }
-.Info .champInfo .allytips {
-  order: 11;
+.Info .champInfo .tips {
   width: 100%;
-  margin-bottom: 0;
-  border: none;
-  border-radius: 15px 15px 0 0;
-  padding: 30px;
-  position: relative;
-  font-size: 14px;
+  margin-bottom: 50px;
+  padding: 30px 30px 10px;
+  font-size: 0;
 }
-.Info .champInfo .allytips p {
+.Info .champInfo .tips p {
   font-weight: bolder;
   color: #4253a0;
   font-size: 18px;
   width: 100%;
+  padding-bottom: 10px;
+  position: relative;
 }
-.Info .champInfo .allytips::after {
+.Info .champInfo .tips p:nth-of-type(2) {
+  margin-top: 50px;
+}
+.Info .champInfo .tips p:nth-of-type(2)::before {
   content: "";
   display: block;
-  width: 92%;
+  width: 100%;
   height: 1px;
-  background-color: rgb(60, 60, 60);
+  background-color: rgb(121, 121, 121);
   position: absolute;
-  bottom: -10px;
-  left: 3%;
+  top: -25px;
+  left: 0%;
 }
-.Info .champInfo .enemytips {
-  order: 12;
-  width: 100%;
-  margin-top: 0;
-  border: none;
-  border-radius: 0 0 15px 15px;
-  padding: 30px;
-  font-size: 14px;
-  line-height: 180%;
-}
-.Info .champInfo .enemytips p {
-  color: #4253a0;
-  font-size: 18px;
-  font-weight: bolder;
-  width: 100%;
-}
-.Info .champInfo .key, .Info .champInfo .id, .Info .champInfo .lore, .Info .champInfo .recommended {
-  display: none;
+.Info .champInfo .tips span {
+  font-size: 15px;
+  padding: 15px 0;
 }
 
 .selectChamp {
   position: relative;
   max-width: 1100px;
-  margin-top: 200px;
+  margin: 150px auto 0;
   padding: 0 2vw;
   border-radius: 5px;
 }
@@ -488,6 +506,7 @@ body {
 }
 .selectChamp .champList li.active {
   background-color: rgb(240, 125, 141);
+  transform: scale(1.02);
   color: white;
 }
 .selectChamp .champList li.active:hover {
@@ -496,4 +515,567 @@ body {
 .selectChamp .champList li:hover {
   color: #f07d8d;
   border: 1px #f07d8d solid;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Info .champInfo .info div p {
+    font-size: 14px;
+  }
+  .Info .champInfo .info div div {
+    width: 65%;
+  }
+  .Info .champInfo .mainInfo figure figcaption.active {
+    margin: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .selectChamp {
+    margin: 180px auto 0;
+  }
+  .selectChamp .typeChamp {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.4vw;
+    border-bottom: 1px solid #5e5e5e;
+  }
+  .selectChamp .typeChamp li {
+    width: auto;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .selectChamp .typeChamp li.active {
+    background-color: rgb(240, 125, 141);
+    color: white;
+    font-size: 14px;
+  }
+  .selectChamp .typeChamp li.active:hover {
+    color: white;
+    font-size: 14px;
+  }
+  .selectChamp .typeChamp li:hover {
+    border: 1px rgb(240, 125, 141) solid;
+    color: rgb(240, 125, 141);
+    font-size: 14px;
+  }
+  .selectChamp .champList {
+    padding: 15px 5px;
+  }
+  .selectChamp .champList li {
+    font-size: 14px;
+    padding: 2px 8px;
+    height: 32px;
+    margin: 2px;
+  }
+  .Info .champInfo .mainInfo {
+    width: 100%;
+    height: auto;
+    order: 0;
+    justify-content: left;
+    margin-bottom: 0;
+    padding: 30px 10px 10px;
+  }
+  .Info .champInfo .mainInfo figure {
+    position: relative;
+  }
+  .Info .champInfo .mainInfo figure img {
+    width: 220px;
+    height: 220px;
+  }
+  .Info .champInfo .mainInfo figure figcaption {
+    margin: 30px 0 10px;
+    line-height: 30px;
+  }
+  .Info .champInfo .mainInfo figure figcaption.active {
+    margin: 0px 0 10px;
+  }
+  .Info .champInfo .mainInfo figure .name {
+    top: 10px;
+    left: 250px;
+    font-size: 20px;
+  }
+  .Info .champInfo .mainInfo figure span {
+    top: 190px;
+    left: 90px;
+  }
+  .Info .champInfo .mainInfo figure .skins div {
+    font-size: 12px;
+    width: 33%;
+    margin: 20px 0;
+  }
+  .Info .champInfo .mainInfo figure .skins div img {
+    width: 120px;
+    height: 120px;
+  }
+  .Info .champInfo .mainInfo figure .skins div figcaption {
+    padding: 0 20px;
+  }
+  .Info .champInfo .mainInfo figure .skins div figcaption.active {
+    margin: 0;
+  }
+  .Info .champInfo .mainInfo figure .skins .skin {
+    width: 120px;
+    height: 120px;
+  }
+  .Info .champInfo .mainInfo .type {
+    top: 212px;
+    left: 260px;
+  }
+  .Info .champInfo .mainInfo .tags {
+    top: 90px;
+    left: 260px;
+    font-size: 14px;
+    border-radius: 15px;
+  }
+  .Info .champInfo .mainInfo .tags figure {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 95px;
+    position: relative;
+  }
+  .Info .champInfo .mainInfo .tags figure p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .Info .champInfo .mainInfo .tags figure img {
+    margin: 15px 10px 5px;
+    width: 45px;
+    height: 45px;
+    filter: brightness(0.9);
+  }
+  .Info .champInfo .mainInfo .tags figure::before {
+    content: "";
+    display: block;
+    width: 98%;
+    height: 1px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    top: 35px;
+    left: 1%;
+  }
+  .Info .champInfo .mainInfo .tags figure figcaption {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(164, 167, 173);
+    transform: translateY(10px);
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .Info .champInfo .mainInfo .tags figure figcaption::after {
+    border-bottom: 5px solid rgb(164, 167, 173);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .Info .champInfo .mainInfo .tags figure:hover figcaption {
+    opacity: 1;
+  }
+  .Info .champInfo .mainInfo .popup {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9137254902);
+    border-radius: 20px;
+  }
+  .Info .champInfo .mainInfo .popup span {
+    position: absolute;
+    top: 30%;
+    font-size: 35px;
+    transition: 0.5s;
+    border: none;
+    font-size: 60px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .Info .champInfo .mainInfo .popup span:nth-child(1) {
+    left: 50%;
+    transform: translateX(-50%) translateY(-60px);
+    font-size: 40px;
+  }
+  .Info .champInfo .mainInfo .popup span:nth-child(2) {
+    left: 50%;
+    transform: translateX(-235px) translateY(160px);
+  }
+  .Info .champInfo .mainInfo .popup span:nth-child(3) {
+    left: 50%;
+    transform: translateX(178px) translateY(160px);
+  }
+  .Info .champInfo .mainInfo .popup span:hover {
+    color: #f07d8d;
+  }
+  .Info .champInfo .mainInfo .popup img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    height: 360px;
+    border-radius: 10px;
+  }
+  .Info .champInfo .mainInfo .popup p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 18px;
+    transform: translateX(-50%) translateY(395px);
+  }
+  .Info .champInfo .info {
+    width: 100%;
+    height: 350px;
+  }
+  .Info .champInfo .info div {
+    height: 60px;
+    padding-left: 13vw;
+  }
+  .Info .champInfo .stats {
+    width: 100%;
+  }
+  .Info .champInfo .spells {
+    padding: 10px;
+  }
+  .Info .champInfo .spells .spellBox, .Info .champInfo .spells .passive {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 15px;
+  }
+  .Info .champInfo .spells .spellBox:hover, .Info .champInfo .spells .passive:hover {
+    border: 3px solid rgb(210, 210, 210);
+  }
+  .Info .champInfo .spells .spellBox:hover h4::after, .Info .champInfo .spells .passive:hover h4::after {
+    background-color: rgb(210, 210, 210);
+  }
+  .Info .champInfo .spells .spellBox h4, .Info .champInfo .spells .passive h4 {
+    padding-top: 13px;
+    padding-left: 90px;
+    margin-bottom: 70px;
+  }
+  .Info .champInfo .spells .spellBox h4::after, .Info .champInfo .spells .passive h4::after {
+    bottom: -45px;
+  }
+  .Info .champInfo .spells .spellBox figure, .Info .champInfo .spells .passive figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  .Info .champInfo .spells .spellBox figure img, .Info .champInfo .spells .passive figure img {
+    position: absolute;
+    top: 15px;
+  }
+  .Info .champInfo .spells .spellBox figure figcaption, .Info .champInfo .spells .passive figure figcaption {
+    width: 100%;
+  }
+  .Info .champInfo .spells .spellBox div p, .Info .champInfo .spells .passive div p {
+    margin: 10px 0;
+    font-size: 14px;
+    word-spacing: 1px;
+  }
+  .Info .champInfo .tips {
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 30px 15px 10px;
+  }
+  .Info .champInfo .tips span {
+    font-size: 14px;
+  }
+}
+@media (min-width: 240px) and (max-width: 480px) {
+  .selectChamp {
+    margin: 180px auto 0;
+  }
+  .selectChamp .typeChamp {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #5e5e5e;
+  }
+  .selectChamp .typeChamp li {
+    width: 29%;
+    line-height: 40px;
+  }
+  .selectChamp .typeChamp li.active {
+    border: none;
+  }
+  .selectChamp .champList {
+    padding: 0;
+    margin-top: 20px;
+  }
+  .selectChamp .champList li {
+    padding: 2px 8px;
+    margin: 2px;
+    font-size: 12.5px;
+    height: 30px;
+  }
+  .selectChamp .champList li.active {
+    border: none;
+  }
+  .Info {
+    margin-top: 30px;
+  }
+  .Info .champInfo .mainInfo {
+    width: 100%;
+    height: auto;
+    order: 0;
+    justify-content: left;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+  .Info .champInfo .mainInfo figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Info .champInfo .mainInfo figure img {
+    width: 260px;
+    margin: 0 auto;
+  }
+  .Info .champInfo .mainInfo figure figcaption {
+    margin: 130px 0 10px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  .Info .champInfo .mainInfo figure figcaption.active {
+    margin: 10px 0 10px;
+  }
+  .Info .champInfo .mainInfo figure .name {
+    position: relative;
+    left: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  .Info .champInfo .mainInfo figure span {
+    top: 195px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .Info .champInfo .mainInfo figure .skins div {
+    font-size: 12px;
+    width: 33%;
+    height: 115px;
+    margin: 10px 0;
+  }
+  .Info .champInfo .mainInfo figure .skins div img {
+    width: 90px;
+    height: 90px;
+  }
+  .Info .champInfo .mainInfo figure .skins div figcaption {
+    padding: 0 20px;
+  }
+  .Info .champInfo .mainInfo figure .skins div p {
+    font-size: 9px;
+  }
+  .Info .champInfo .mainInfo figure .skins .skin {
+    width: 90px;
+    height: 90px;
+  }
+  .Info .champInfo .mainInfo figure .skins.active {
+    height: auto;
+    transition: 1s;
+    overflow: hidden;
+    padding: 150px 0 30px;
+  }
+  .Info .champInfo .mainInfo figure .skins.active a {
+    transform: scale(1) translateX(-5px);
+    opacity: 1;
+  }
+  .Info .champInfo .mainInfo .type {
+    top: 300px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .Info .champInfo .mainInfo .tags {
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    border-radius: 15px;
+  }
+  .Info .champInfo .mainInfo .tags figure {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 95px;
+    position: relative;
+  }
+  .Info .champInfo .mainInfo .tags figure p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 6px 0;
+  }
+  .Info .champInfo .mainInfo .tags figure img {
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+    filter: brightness(0.9);
+  }
+  .Info .champInfo .mainInfo .tags figure::before {
+    content: "";
+    display: block;
+    width: 98%;
+    height: 1px;
+    background-color: rgb(214, 214, 214);
+    position: absolute;
+    top: 35px;
+    left: 1%;
+  }
+  .Info .champInfo .mainInfo .tags figure figcaption {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(164, 167, 173);
+    transform: translateY(10px);
+    border-radius: 10px;
+    transition: 0.3s;
+    position: absolute;
+  }
+  .Info .champInfo .mainInfo .tags figure figcaption::after {
+    border-bottom: 5px solid rgb(164, 167, 173);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%) translateY(-100%);
+  }
+  .Info .champInfo .mainInfo .tags figure:hover figcaption {
+    opacity: 1;
+  }
+  .Info .champInfo .mainInfo .popup {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9137254902);
+    border-radius: 20px;
+  }
+  .Info .champInfo .mainInfo .popup span {
+    position: absolute;
+    top: 30%;
+    font-size: 35px;
+    transition: 0.5s;
+    border: none;
+    border-radius: 50%;
+    font-size: 60px;
+    z-index: 10;
+    padding: 0;
+    cursor: pointer;
+  }
+  .Info .champInfo .mainInfo .popup span:nth-child(1) {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    font-size: 40px;
+  }
+  .Info .champInfo .mainInfo .popup span:nth-child(2) {
+    left: 50%;
+    transform: translateX(-180px) translateY(140px);
+    color: #c4c8d4;
+  }
+  .Info .champInfo .mainInfo .popup span:nth-child(3) {
+    left: 50%;
+    transform: translateX(120px) translateY(140px);
+    color: #c4c8d4;
+  }
+  .Info .champInfo .mainInfo .popup span:hover {
+    color: #f07d8d;
+  }
+  .Info .champInfo .mainInfo .popup img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+  }
+  .Info .champInfo .mainInfo .popup p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 18px;
+    transform: translateX(-50%) translateY(370px);
+  }
+  .Info .champInfo .info {
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+  }
+  .Info .champInfo .info div {
+    height: 60px;
+  }
+  .Info .champInfo .stats {
+    width: 100%;
+  }
+  .Info .champInfo .spells {
+    padding: 10px;
+  }
+  .Info .champInfo .spells .spellBox, .Info .champInfo .spells .passive {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 15px;
+  }
+  .Info .champInfo .spells .spellBox:hover, .Info .champInfo .spells .passive:hover {
+    border: 3px solid rgb(210, 210, 210);
+  }
+  .Info .champInfo .spells .spellBox:hover h4::after, .Info .champInfo .spells .passive:hover h4::after {
+    background-color: rgb(210, 210, 210);
+  }
+  .Info .champInfo .spells .spellBox h4, .Info .champInfo .spells .passive h4 {
+    padding-top: 13px;
+    padding-left: 90px;
+    margin-bottom: 70px;
+  }
+  .Info .champInfo .spells .spellBox h4::after, .Info .champInfo .spells .passive h4::after {
+    bottom: -45px;
+  }
+  .Info .champInfo .spells .spellBox figure, .Info .champInfo .spells .passive figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  .Info .champInfo .spells .spellBox figure img, .Info .champInfo .spells .passive figure img {
+    position: absolute;
+    top: 15px;
+  }
+  .Info .champInfo .spells .spellBox figure figcaption, .Info .champInfo .spells .passive figure figcaption {
+    width: 100%;
+  }
+  .Info .champInfo .spells .spellBox div p, .Info .champInfo .spells .passive div p {
+    margin: 10px 0;
+    font-size: 14px;
+    word-spacing: 1px;
+  }
+  .Info .champInfo .tips {
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 30px 15px 10px;
+  }
+  .Info .champInfo .tips span {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=champ.css.map */

@@ -1,7 +1,7 @@
 const APIKEY = "RGAPI-276cb608-d858-41fd-a5b2-1836549ff72c"
 //소환사명으로 정보 가져오기
 
-let leagueList = document.querySelector(".leagueList");
+let leagueList = document.querySelector(".leagues");
 let leagues = leagueList.querySelectorAll("li");
 
 let divisionli = document.querySelector(".division");
@@ -9,7 +9,7 @@ let division = divisionli.querySelectorAll("li");
 let whatDivi = "I";
 let whatleag = "challengerleagues";
 
-let Rankers = document.querySelector(".Rankers");
+let Rankers = document.querySelector(".rankers");
 let num1 = 0, num2 = 0;
 
 window.onload = fetch1("challengerleagues");
@@ -89,7 +89,7 @@ function fetch1(Wl,Rnum) {
     .then((userData) => {
         GMR(userData,Rnum); 
         
-        let RankerN = document.querySelectorAll(".RankerName");
+        let RankerN = document.querySelectorAll(".rankerName");
         RankerN.forEach((r)=>{
                 r.addEventListener("click", ()=>{
                     handlesearchubmit(r.innerText);
@@ -104,7 +104,7 @@ function fetch2(Wl,whatDivi,Rnum) {
         .then((userData) => {
         GMR2(userData,Rnum);
         
-        let RankerN = document.querySelectorAll(".RankerName");
+        let RankerN = document.querySelectorAll(".rankerName");
         RankerN.forEach((r)=>{
                 r.addEventListener("click", ()=>{
                     handlesearchubmit(r.innerText);
@@ -149,16 +149,16 @@ function listMake(ranker, key) {
     const listItem = document.createElement("li");
 
     const Rank = document.createElement("p");
-    Rank.className = "Rank";
+    Rank.className = "rank";
 
     const RankerName = document.createElement("p");
-    RankerName.className = "RankerName";
+    RankerName.className = "rankerName";
 
     const LP = document.createElement("p");
     LP.className = "LP";
 
     const WL = document.createElement("div");
-    WL.className = "WL";
+    WL.className = "winlose";
     const win = document.createElement("p");
     win.className = "win";
     win.style = `width:${percent}%`

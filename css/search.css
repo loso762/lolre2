@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   width: 35%;
-  padding-left: 2vw;
+  padding-left: 1vw;
 }
 .info .info0 .WLPER div {
   text-align: center;
@@ -230,14 +230,14 @@
   height: 450px;
   margin: 10px 0 100px;
 }
-.info .info1 .matchinfoCon {
+.info .info1 .RankInfoCon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 44%;
   height: 100%;
 }
-.info .info1 .matchinfoCon .matchinfo {
+.info .info1 .RankInfoCon .RankInfo {
   width: 99%;
   height: 48%;
   background: none;
@@ -250,49 +250,31 @@
   align-items: center;
   position: relative;
 }
-.info .info1 .matchinfoCon .matchinfo span {
-  background-color: transparent;
-  position: absolute;
-  border-radius: 6px 27px;
-  border: 0;
-  width: 0px;
-  height: 0px;
-  transition: width 1s, height 1s;
-}
-.info .info1 .matchinfoCon .matchinfo span:nth-child(1) {
-  border-top: 0;
-  border-right: 0;
-  top: -6px;
-  right: -5px;
-  transform-origin: left;
-}
-.info .info1 .matchinfoCon .matchinfo span:nth-child(2) {
-  border-bottom: 0;
-  border-left: 0;
-  bottom: -6px;
-  left: -5px;
-}
-.info .info1 .matchinfoCon .matchinfo .RankCon {
+.info .info1 .RankInfoCon .RankInfo figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 40%;
+  z-index: 4;
 }
-.info .info1 .matchinfoCon .matchinfo .RankCon h3 {
+.info .info1 .RankInfoCon .RankInfo figure figcaption {
   font-size: 18px;
   text-align: center;
   width: 100%;
   margin-bottom: 20px;
 }
-.info .info1 .matchinfoCon .matchinfo .RankCon img {
+.info .info1 .RankInfoCon .RankInfo figure img {
+  position: relative;
   width: 90px;
+  z-index: 10;
 }
-.info .info1 .matchinfoCon .matchinfo div {
+.info .info1 .RankInfoCon .RankInfo ul {
   width: 60%;
   display: flex;
   flex-direction: column;
 }
-.info .info1 .matchinfoCon .matchinfo div li {
+.info .info1 .RankInfoCon .RankInfo ul li {
   text-align: left;
   height: 30px;
   margin: 10px;
@@ -300,8 +282,9 @@
   align-items: center;
   font-size: 14px;
   color: rgb(50, 50, 50);
+  word-spacing: 3px;
 }
-.info .info1 .matchinfoCon .matchinfo div li .tierImg {
+.info .info1 .RankInfoCon .RankInfo ul li .tierImg {
   margin-left: 15px;
   width: 50px;
   height: 50px;
@@ -393,23 +376,23 @@
   display: flex;
   align-items: center;
 }
-.info .info2 .matchCon .match .matchInfo1 {
+.info .info2 .matchCon .match .MI1 {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.info .info2 .matchCon .match .matchInfo1 li {
+.info .info2 .matchCon .match .MI1 li {
   font-size: 13px;
   display: flex;
   height: 20px;
 }
-.info .info2 .matchCon .match .matchInfo1 li:nth-child(2) {
+.info .info2 .matchCon .match .MI1 li:nth-child(2) {
   position: relative;
   align-items: top;
   margin-bottom: 40px;
 }
-.info .info2 .matchCon .match .matchInfo1 li:nth-child(2)::after {
+.info .info2 .matchCon .match .MI1 li:nth-child(2)::after {
   content: "";
   display: block;
   width: 50px;
@@ -419,15 +402,15 @@
   left: 0;
   background: rgb(116, 116, 116);
 }
-.info .info2 .matchCon .match .matchInfo1 .YouWin {
+.info .info2 .matchCon .match .MI1 .YouWin {
   font-weight: bolder;
   color: rgb(0, 0, 255);
 }
-.info .info2 .matchCon .match .matchInfo1 .YouLose {
+.info .info2 .matchCon .match .MI1 .YouLose {
   font-weight: bolder;
   color: rgb(255, 0, 0);
 }
-.info .info2 .matchCon .match .matchInfo1 .matchID {
+.info .info2 .matchCon .match .MI1 .matchID {
   color: var(--match-font);
 }
 .info .info2 .matchCon .match figure {
@@ -467,7 +450,7 @@
   justify-content: center;
   border-radius: 100%;
 }
-.info .info2 .matchCon .match .matchInfo2 {
+.info .info2 .matchCon .match .MI2 {
   max-width: 210px;
   height: 80%;
   display: flex;
@@ -475,27 +458,27 @@
   flex-wrap: wrap;
   margin-right: 1.5vw;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells {
+.info .info2 .matchCon .match .MI2 .mySpell {
   width: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells figure {
+.info .info2 .matchCon .match .MI2 .mySpell figure {
   margin: 0;
   width: 30px;
   height: 30px;
   position: relative;
   transition: 0.6s;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells figure:hover img {
+.info .info2 .matchCon .match .MI2 .mySpell figure:hover img {
   transform: scale(1.05);
 }
-.info .info2 .matchCon .match .matchInfo2 .spells figure:nth-child(1) figcaption {
+.info .info2 .matchCon .match .MI2 .mySpell figure:nth-child(1) figcaption {
   width: 64px;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells figure figcaption {
+.info .info2 .matchCon .match .MI2 .mySpell figure figcaption {
   width: 300px;
   height: auto;
   padding: 10px;
@@ -512,7 +495,7 @@
   font-size: 12px;
   border: none;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells figure figcaption::after {
+.info .info2 .matchCon .match .MI2 .mySpell figure figcaption::after {
   border-bottom: var(--after-width) solid #383838;
   border-left: var(--after-width) solid transparent;
   border-right: var(--after-width) solid transparent;
@@ -523,24 +506,24 @@
   left: 50%;
   transform: translateX(-60%) translateY(-100%);
 }
-.info .info2 .matchCon .match .matchInfo2 .spells figure:hover figcaption {
+.info .info2 .matchCon .match .MI2 .mySpell figure:hover figcaption {
   display: flex;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells .spell {
+.info .info2 .matchCon .match .MI2 .mySpell .spell {
   width: 30px;
   height: 30px;
   border-radius: 7px;
   margin: 2px 2px 0 0;
   transition: 0.3s;
 }
-.info .info2 .matchCon .match .matchInfo2 .spells .rune {
+.info .info2 .matchCon .match .MI2 .mySpell .rune {
   width: 30px;
   height: 30px;
   border-radius: 7px;
   margin: 2px 2px 0 0;
   transition: 0.3s;
 }
-.info .info2 .matchCon .match .matchInfo2 .KD {
+.info .info2 .matchCon .match .MI2 .myKD {
   width: 140px;
   text-align: center;
   font-size: 13px;
@@ -549,14 +532,14 @@
   justify-content: space-around;
   color: var(--match-font);
 }
-.info .info2 .matchCon .match .matchInfo2 .KD span {
+.info .info2 .matchCon .match .MI2 .myKD span {
   color: red;
   font-size: 14px;
 }
-.info .info2 .matchCon .match .matchInfo2 .KD p {
+.info .info2 .matchCon .match .MI2 .myKD p {
   margin: 0;
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems {
+.info .info2 .matchCon .match .MI2 .myItem {
   font-size: 0;
   width: 100%;
   display: flex;
@@ -564,22 +547,22 @@
   align-items: center;
   padding: 0 3px;
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems figure {
+.info .info2 .matchCon .match .MI2 .myItem figure {
   margin: 0;
   width: 30px;
   height: 30px;
   position: relative;
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems figure img {
+.info .info2 .matchCon .match .MI2 .myItem figure img {
   width: 90%;
   height: 90%;
   border-radius: 5px;
   transition: 0.3s;
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems figure img:hover {
+.info .info2 .matchCon .match .MI2 .myItem figure img:hover {
   transform: scale(1.1);
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems figure p {
+.info .info2 .matchCon .match .MI2 .myItem figure p {
   width: 110px;
   height: 30px;
   padding: 0px;
@@ -596,7 +579,7 @@
   text-align: center;
   line-height: 30px;
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems figure p::after {
+.info .info2 .matchCon .match .MI2 .myItem figure p::after {
   border-bottom: 5px solid #383838;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -607,21 +590,21 @@
   left: 50%;
   transform: translateX(-60%) translateY(-100%);
 }
-.info .info2 .matchCon .match .matchInfo2 .myItems figure:hover p {
+.info .info2 .matchCon .match .MI2 .myItem figure:hover p {
   display: block;
 }
-.info .info2 .matchCon .match .matchInfo3 {
+.info .info2 .matchCon .match .MI3 {
   height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-size: 13px;
 }
-.info .info2 .matchCon .match .matchInfo3 .killPer {
+.info .info2 .matchCon .match .MI3 .killPer {
   color: red;
   background: #a3374b;
 }
-.info .info2 .matchCon .matchList {
+.info .info2 .matchCon .participantsList {
   width: 49%;
   height: 220px;
   padding: 0.5vw 0;
@@ -632,7 +615,7 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
-.info .info2 .matchCon .matchList .matchplayer {
+.info .info2 .matchCon .participantsList .participants {
   font-size: 12px;
   width: 49%;
   height: 17%;
@@ -643,11 +626,11 @@
   padding-right: 5px;
   margin-bottom: 3px;
 }
-.info .info2 .matchCon .matchList .matchplayer p {
+.info .info2 .matchCon .participantsList .participants p {
   width: 31%;
   word-spacing: -3px;
 }
-.info .info2 .matchCon .matchList .matchplayer img {
+.info .info2 .matchCon .participantsList .participants img {
   width: 27px;
   height: 27px;
   margin-left: 4px;
@@ -708,24 +691,24 @@
     justify-content: center;
     align-items: center;
   }
-  .info .info2 .matchCon .match .matchInfo1 {
+  .info .info2 .matchCon .match .MI1 {
     width: 13%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  .info .info2 .matchCon .match .matchInfo1 li {
+  .info .info2 .matchCon .match .MI1 li {
     font-size: 16px;
     display: flex;
     height: 20px;
   }
-  .info .info2 .matchCon .match .matchInfo1 li:nth-child(2) {
+  .info .info2 .matchCon .match .MI1 li:nth-child(2) {
     position: relative;
     align-items: top;
     margin-bottom: 40px;
   }
-  .info .info2 .matchCon .match .matchInfo1 li:nth-child(2)::after {
+  .info .info2 .matchCon .match .MI1 li:nth-child(2)::after {
     content: "";
     display: block;
     width: 50px;
@@ -735,10 +718,10 @@
     left: 0;
     background: rgb(159, 159, 159);
   }
-  .info .info2 .matchCon .match .matchInfo1 .matchID {
+  .info .info2 .matchCon .match .MI1 .matchID {
     color: var(--match-font);
   }
-  .info .info2 .matchCon .match .matchInfo2 {
+  .info .info2 .matchCon .match .MI2 {
     max-width: 300px;
     height: 100%;
     display: flex;
@@ -746,34 +729,34 @@
     flex-wrap: wrap;
     margin-right: 1.5vw;
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells {
+  .info .info2 .matchCon .match .MI2 .mySpell {
     width: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure {
+  .info .info2 .matchCon .match .MI2 .mySpell figure {
     margin: 0;
     width: 40px;
     height: 40px;
     position: relative;
     transition: 0.6s;
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure:hover img {
+  .info .info2 .matchCon .match .MI2 .mySpell figure:hover img {
     transform: scale(1.05);
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure:nth-child(1) figcaption {
+  .info .info2 .matchCon .match .MI2 .mySpell figure:nth-child(1) figcaption {
     width: 156px;
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure .spell {
+  .info .info2 .matchCon .match .MI2 .mySpell figure .spell {
     width: 40px;
     height: 40px;
     border-radius: 7px;
     margin: 2px 2px 0 0;
     transition: 0.3s;
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure figcaption {
+  .info .info2 .matchCon .match .MI2 .mySpell figure figcaption {
     width: 250px;
     height: auto;
     padding: 10px;
@@ -790,7 +773,7 @@
     font-size: 12px;
     border: none;
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure figcaption::after {
+  .info .info2 .matchCon .match .MI2 .mySpell figure figcaption::after {
     border-bottom: 5px solid #383838;
     border-left: 5px solid rgba(255, 255, 255, 0);
     border-right: 5px solid rgba(255, 255, 255, 0);
@@ -801,22 +784,22 @@
     left: 50%;
     transform: translateX(-60%) translateY(-100%);
   }
-  .info .info2 .matchCon .match .matchInfo2 .spells figure:hover figcaption {
+  .info .info2 .matchCon .match .MI2 .mySpell figure:hover figcaption {
     display: flex;
   }
-  .info .info2 .matchCon .match .matchInfo2 .KD {
+  .info .info2 .matchCon .match .MI2 .myKD {
     width: 200px;
     padding-top: 10px;
     font-size: 16px;
     color: var(--match-font);
   }
-  .info .info2 .matchCon .match .matchInfo2 .KD span {
+  .info .info2 .matchCon .match .MI2 .myKD span {
     color: red;
   }
-  .info .info2 .matchCon .match .matchInfo2 .KD p {
+  .info .info2 .matchCon .match .MI2 .myKD p {
     margin: 0;
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems {
+  .info .info2 .matchCon .match .MI2 .myItem {
     font-size: 0;
     width: 100%;
     display: flex;
@@ -824,22 +807,22 @@
     align-items: center;
     padding: 0 3px;
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems figure {
+  .info .info2 .matchCon .match .MI2 .myItem figure {
     margin: 0;
     width: 40px;
     height: 40px;
     position: relative;
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems figure img {
+  .info .info2 .matchCon .match .MI2 .myItem figure img {
     width: 90%;
     height: 90%;
     border-radius: 5px;
     transition: 0.3s;
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems figure img:hover {
+  .info .info2 .matchCon .match .MI2 .myItem figure img:hover {
     transform: scale(1.1);
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems figure figcaption {
+  .info .info2 .matchCon .match .MI2 .myItem figure figcaption {
     height: 30px;
     padding: 0px;
     background: #383838;
@@ -853,7 +836,7 @@
     transform: translateY(120%);
     opacity: 0.9;
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems figure figcaption::after {
+  .info .info2 .matchCon .match .MI2 .myItem figure figcaption::after {
     border-bottom: 5px solid #383838;
     border-left: 5px solid rgba(255, 255, 255, 0);
     border-right: 5px solid rgba(255, 255, 255, 0);
@@ -864,10 +847,10 @@
     left: 50%;
     transform: translateX(-60%) translateY(-100%);
   }
-  .info .info2 .matchCon .match .matchInfo2 .myItems figure:hover figcaption {
+  .info .info2 .matchCon .match .MI2 .myItem figure:hover figcaption {
     display: block;
   }
-  .info .info2 .matchCon .match .matchInfo3 {
+  .info .info2 .matchCon .match .MI3 {
     height: 85%;
     display: flex;
     flex-direction: column;
@@ -875,7 +858,7 @@
     font-size: 16px;
     padding-left: 4vw;
   }
-  .info .info2 .matchCon .match .matchInfo3 .killPer {
+  .info .info2 .matchCon .match .MI3 .killPer {
     color: red;
     background: #a3374b;
   }
@@ -922,7 +905,7 @@
     bottom: 0;
     left: 80%;
   }
-  .info .info2 .matchCon .matchList {
+  .info .info2 .matchCon .participantsList {
     margin-top: 20px;
     width: 100%;
     height: 290px;
@@ -935,7 +918,7 @@
     border-top: #7e7e7e 1px solid;
     border-radius: 0;
   }
-  .info .info2 .matchCon .matchList .matchplayer {
+  .info .info2 .matchCon .participantsList .participants {
     font-size: 15px;
     width: 49%;
     height: 18%;
@@ -946,76 +929,76 @@
     padding-right: 5px;
     margin-bottom: 3px;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(1) {
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) {
     justify-content: left;
     padding-left: calc(12vw + 50px);
     position: relative;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(1) p {
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) p {
     position: absolute;
     left: 0%;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(1) img {
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) img {
     position: absolute;
     left: 12vw;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(2) {
+  .info .info2 .matchCon .participantsList .participants:nth-child(2) {
     justify-content: left;
     padding-left: calc(12vw + 50px);
     position: relative;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(2) p {
+  .info .info2 .matchCon .participantsList .participants:nth-child(2) p {
     position: absolute;
     left: 0%;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(2) img {
+  .info .info2 .matchCon .participantsList .participants:nth-child(2) img {
     position: absolute;
     left: 12vw;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(3) {
+  .info .info2 .matchCon .participantsList .participants:nth-child(3) {
     justify-content: left;
     padding-left: calc(12vw + 50px);
     position: relative;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(3) p {
+  .info .info2 .matchCon .participantsList .participants:nth-child(3) p {
     position: absolute;
     left: 0%;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(3) img {
+  .info .info2 .matchCon .participantsList .participants:nth-child(3) img {
     position: absolute;
     left: 12vw;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(4) {
+  .info .info2 .matchCon .participantsList .participants:nth-child(4) {
     justify-content: left;
     padding-left: calc(12vw + 50px);
     position: relative;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(4) p {
+  .info .info2 .matchCon .participantsList .participants:nth-child(4) p {
     position: absolute;
     left: 0%;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(4) img {
+  .info .info2 .matchCon .participantsList .participants:nth-child(4) img {
     position: absolute;
     left: 12vw;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(5) {
+  .info .info2 .matchCon .participantsList .participants:nth-child(5) {
     justify-content: left;
     padding-left: calc(12vw + 50px);
     position: relative;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(5) p {
+  .info .info2 .matchCon .participantsList .participants:nth-child(5) p {
     position: absolute;
     left: 0%;
   }
-  .info .info2 .matchCon .matchList .matchplayer:nth-child(5) img {
+  .info .info2 .matchCon .participantsList .participants:nth-child(5) img {
     position: absolute;
     left: 12vw;
   }
-  .info .info2 .matchCon .matchList .matchplayer p {
+  .info .info2 .matchCon .participantsList .participants p {
     width: 31%;
     word-spacing: -2px;
   }
-  .info .info2 .matchCon .matchList .matchplayer img {
+  .info .info2 .matchCon .participantsList .participants img {
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -1023,7 +1006,7 @@
     border-radius: 10px;
     transition: 0.3s;
   }
-  .info .info2 .matchCon .matchList .matchplayer img:hover {
+  .info .info2 .matchCon .participantsList .participants img:hover {
     transform: scale(1.05);
   }
 }
@@ -1047,7 +1030,7 @@
     align-items: center;
     width: 35%;
     height: 160px;
-    padding-left: 20px;
+    padding-left: 2vw;
   }
   .info .info0 .mainInfo p {
     width: 100%;
@@ -1057,13 +1040,12 @@
   }
   .info .info0 .WLPER {
     width: 60%;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 0;
   }
   .info .info0 .WLPER div {
     text-align: center;
     width: 50%;
-    transform: scale(0.9);
   }
   .info .info0 .WLPER div p {
     width: 100%;
@@ -1072,7 +1054,15 @@
     margin: 15px 0;
   }
   .info .info0 .WLPER div:nth-child(1) {
-    transform: scale(0.8) translateX(0px);
+    margin: 0;
+    width: 90px;
+    height: 90px;
+  }
+  .info .info0 .WLPER div:nth-child(1) .center {
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
+    font-size: 15px;
   }
   .info .info0 .WLPER div:nth-child(2) {
     transform: scale(0.8) translateX(-14px);
@@ -1146,7 +1136,7 @@
     display: block;
     width: 100%;
     height: 50%;
-    background-color: #5383E8;
+    background-color: rgb(240, 125, 141);
     position: absolute;
     bottom: 0;
     border: none;
@@ -1248,8 +1238,9 @@
   .info .info1 .likeChamp li {
     text-align: left;
     height: 43px;
-    margin: 16px 5px;
+    margin: 16px 1px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-size: 14px;
     color: rgb(50, 50, 50);
@@ -1267,17 +1258,19 @@
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    margin: 0 15px;
+    margin: 0 5px;
     transition: 0.5s;
     position: relative;
   }
   .info .info1 .likeChamp li h4 {
     width: 28%;
-    padding-left: 10px;
+    padding-left: 1vw;
     transition: 0.5s;
+    font-size: calc(9px + 1vw);
+    line-height: 14px;
   }
   .info .info1 .likeChamp li p {
-    font-size: 12px;
+    font-size: calc(9px + 1vw);
     width: 30%;
     text-align: center;
   }
@@ -1289,7 +1282,7 @@
   }
   .info .info1 .likeChamp .top p {
     text-align: center;
-    font-size: 14px;
+    font-size: calc(9px + 1vw);
     font-weight: bold;
   }
   .info .info1 .likeChamp .top p:nth-child(1) {
@@ -1319,7 +1312,7 @@
   .info .info1 .RankInfoCon::before, .info .info1 .likeChamp::before {
     border-top: 6px solid rgb(203, 203, 203);
     border-right: 6px solid rgb(203, 203, 203);
-    z-index: -1;
+    z-index: 0;
     top: -6px;
     right: -6px;
   }
@@ -1376,7 +1369,7 @@
     flex-direction: column;
     padding: 5px;
   }
-  .info .info2 .matchCon .matchInfo {
+  .info .info2 .matchCon .match {
     font-size: 12px;
     width: 100%;
     height: 170px;
@@ -1387,24 +1380,24 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  .info .info2 .matchCon .matchInfo .MI1 {
+  .info .info2 .matchCon .match .MI1 {
     width: calc(34px + 5vw);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  .info .info2 .matchCon .matchInfo .MI1 li {
+  .info .info2 .matchCon .match .MI1 li {
     font-size: 12px;
     display: flex;
     height: 20px;
   }
-  .info .info2 .matchCon .matchInfo .MI1 li:nth-child(2) {
+  .info .info2 .matchCon .match .MI1 li:nth-child(2) {
     position: relative;
     align-items: top;
     margin-bottom: 20px;
   }
-  .info .info2 .matchCon .matchInfo .MI1 li:nth-child(2)::after {
+  .info .info2 .matchCon .match .MI1 li:nth-child(2)::after {
     content: "";
     display: block;
     width: 40px;
@@ -1414,10 +1407,10 @@
     left: 0;
     background: rgb(159, 159, 159);
   }
-  .info .info2 .matchCon .matchInfo .MI1 .matchID {
+  .info .info2 .matchCon .match .MI1 .matchID {
     color: var(--match-font);
   }
-  .info .info2 .matchCon .matchInfo .MI2 {
+  .info .info2 .matchCon .match .MI2 {
     max-width: calc(50px + 40vw);
     height: 90%;
     display: flex;
@@ -1426,14 +1419,14 @@
     margin-right: 0;
     margin-left: 2vw;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell {
-    width: 50%;
+  .info .info2 .matchCon .match .MI2 .mySpell {
+    width: 49%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure {
+  .info .info2 .matchCon .match .MI2 .mySpell figure {
     margin: 0;
     width: calc(27px + 3vw);
     height: calc(27px + 3vw);
@@ -1441,19 +1434,19 @@
     transition: 0.6s;
     margin: 0 0.8vw;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure:hover img {
+  .info .info2 .matchCon .match .MI2 .mySpell figure:hover img {
     transform: scale(1.05);
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure:nth-child(1) figcaption {
+  .info .info2 .matchCon .match .MI2 .mySpell figure:nth-child(1) figcaption {
     width: 156px;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure img {
+  .info .info2 .matchCon .match .MI2 .mySpell figure img {
     width: calc(29px + 1vw);
     height: calc(29px + 1vw);
     border-radius: 7px;
     transition: 0.3s;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure figcaption {
+  .info .info2 .matchCon .match .MI2 .mySpell figure figcaption {
     width: 250px;
     height: auto;
     padding: 10px;
@@ -1470,7 +1463,7 @@
     font-size: 12px;
     border: none;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure figcaption::after {
+  .info .info2 .matchCon .match .MI2 .mySpell figure figcaption::after {
     border-bottom: 5px solid #383838;
     border-left: 5px solid rgba(255, 255, 255, 0);
     border-right: 5px solid rgba(255, 255, 255, 0);
@@ -1481,22 +1474,22 @@
     left: 50%;
     transform: translateX(-60%) translateY(-100%);
   }
-  .info .info2 .matchCon .matchInfo .MI2 .mySpell figure:hover figcaption {
+  .info .info2 .matchCon .match .MI2 .mySpell figure:hover figcaption {
     display: flex;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myKD {
-    width: 50%;
+  .info .info2 .matchCon .match .MI2 .myKD {
+    width: 48%;
     padding-top: 10px;
     font-size: 12px;
     color: var(--match-font);
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myKD span {
+  .info .info2 .matchCon .match .MI2 .myKD span {
     color: red;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myKD p {
+  .info .info2 .matchCon .match .MI2 .myKD p {
     margin: 0;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem {
+  .info .info2 .matchCon .match .MI2 .myItem {
     font-size: 0;
     width: 100%;
     display: flex;
@@ -1504,22 +1497,22 @@
     align-items: center;
     padding: 0 2px;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem figure {
+  .info .info2 .matchCon .match .MI2 .myItem figure {
     margin: 0;
     width: calc(23px + 2vw);
     height: calc(23px + 2vw);
     position: relative;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem figure img {
+  .info .info2 .matchCon .match .MI2 .myItem figure img {
     width: 90%;
     height: 90%;
     border-radius: 5px;
     transition: 0.3s;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem figure img:hover {
+  .info .info2 .matchCon .match .MI2 .myItem figure img:hover {
     transform: scale(1.1);
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem figure figcaption {
+  .info .info2 .matchCon .match .MI2 .myItem figure figcaption {
     height: 30px;
     padding: 0px;
     background: #383838;
@@ -1534,7 +1527,7 @@
     z-index: 9;
     opacity: 0.9;
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem figure figcaption::after {
+  .info .info2 .matchCon .match .MI2 .myItem figure figcaption::after {
     border-bottom: 5px solid #383838;
     border-left: 5px solid rgba(255, 255, 255, 0);
     border-right: 5px solid rgba(255, 255, 255, 0);
@@ -1545,10 +1538,10 @@
     left: 50%;
     transform: translateX(-60%) translateY(-100%);
   }
-  .info .info2 .matchCon .matchInfo .MI2 .myItem figure:hover figcaption {
+  .info .info2 .matchCon .match .MI2 .myItem figure:hover figcaption {
     display: block;
   }
-  .info .info2 .matchCon .matchInfo .MI3 {
+  .info .info2 .matchCon .match .MI3 {
     width: 80%;
     height: 60px;
     display: flex;
@@ -1559,18 +1552,18 @@
     padding-left: 4vw;
     transform: translateY(17px);
   }
-  .info .info2 .matchCon .matchInfo .MI3 li {
+  .info .info2 .matchCon .match .MI3 li {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20px;
   }
-  .info .info2 .matchCon .matchInfo .MI3 .killPer {
+  .info .info2 .matchCon .match .MI3 .killPer {
     color: red;
     background: #a3374b;
   }
-  .info .info2 .matchCon .matchInfo figure {
+  .info .info2 .matchCon .match figure {
     position: relative;
     width: calc(60px + 3vw);
     height: calc(60px + 3vw);
@@ -1580,17 +1573,17 @@
     align-items: center;
     margin: 0 1% 0;
   }
-  .info .info2 .matchCon .matchInfo figure .lane {
+  .info .info2 .matchCon .match figure .lane {
     margin: 10px 0;
   }
-  .info .info2 .matchCon .matchInfo figure .Pickchamp {
+  .info .info2 .matchCon .match figure .Pickchamp {
     border-radius: 100%;
     width: 100%;
     width: 100%;
     cursor: pointer;
     transition: 0.6s;
   }
-  .info .info2 .matchCon .matchInfo figure .champLevel {
+  .info .info2 .matchCon .match figure .champLevel {
     position: absolute;
     bottom: 10px;
     left: 74%;
@@ -1605,15 +1598,15 @@
     border-radius: 100%;
     transition: 0.6s;
   }
-  .info .info2 .matchCon .matchInfo figure:hover .Pickchamp {
+  .info .info2 .matchCon .match figure:hover .Pickchamp {
     transform: scale(1.05);
     border-radius: 5px;
   }
-  .info .info2 .matchCon .matchInfo figure:hover .champLevel {
+  .info .info2 .matchCon .match figure:hover .champLevel {
     bottom: 0;
     left: 80%;
   }
-  .info .info2 .matchCon .matchInfo::after {
+  .info .info2 .matchCon .match::after {
     content: "";
     display: block;
     background-color: rgb(153, 153, 153);
@@ -1624,10 +1617,11 @@
     transition: 1s;
   }
   .info .info2 .matchCon .participantsList {
-    margin-top: 74px;
+    margin-top: 20px;
     width: 100%;
-    height: 250px;
+    height: 290px;
     padding-top: 20px;
+    margin-top: 70px;
     text-align: center;
     font-size: 0;
     display: flex;
@@ -1638,38 +1632,96 @@
   }
   .info .info2 .matchCon .participantsList .participants {
     font-size: 11px;
-    width: 49.5%;
-    height: 17%;
+    width: 49%;
+    height: 18%;
     display: flex;
     align-items: center;
     justify-content: right;
     margin: 1px 0;
     padding-right: 5px;
     margin-bottom: 3px;
+    text-align: right;
   }
-  .info .info2 .matchCon .participantsList .participants:nth-child(1), .info .info2 .matchCon .participantsList .participants:nth-child(2), .info .info2 .matchCon .participantsList .participants:nth-child(3), .info .info2 .matchCon .participantsList .participants:nth-child(4), .info .info2 .matchCon .participantsList .participants:nth-child(5) {
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) {
     justify-content: left;
-    padding-left: calc(12vw + 40px);
+    padding-left: calc(12vw + 50px);
     position: relative;
+    text-align: left;
   }
-  .info .info2 .matchCon .participantsList .participants:nth-child(1) p, .info .info2 .matchCon .participantsList .participants:nth-child(2) p, .info .info2 .matchCon .participantsList .participants:nth-child(3) p, .info .info2 .matchCon .participantsList .participants:nth-child(4) p, .info .info2 .matchCon .participantsList .participants:nth-child(5) p {
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) p {
     position: absolute;
     left: 0%;
   }
-  .info .info2 .matchCon .participantsList .participants:nth-child(1) img, .info .info2 .matchCon .participantsList .participants:nth-child(2) img, .info .info2 .matchCon .participantsList .participants:nth-child(3) img, .info .info2 .matchCon .participantsList .participants:nth-child(4) img, .info .info2 .matchCon .participantsList .participants:nth-child(5) img {
+  .info .info2 .matchCon .participantsList .participants:nth-child(1) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(2) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+    text-align: left;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(2) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(2) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(3) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+    text-align: left;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(3) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(3) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(4) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+    text-align: left;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(4) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(4) img {
+    position: absolute;
+    left: 12vw;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(5) {
+    justify-content: left;
+    padding-left: calc(12vw + 50px);
+    position: relative;
+    text-align: left;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(5) p {
+    position: absolute;
+    left: 0%;
+  }
+  .info .info2 .matchCon .participantsList .participants:nth-child(5) img {
     position: absolute;
     left: 12vw;
   }
   .info .info2 .matchCon .participantsList .participants p {
-    width: 31%;
-    word-spacing: -3px;
+    width: 29%;
+    word-spacing: -2px;
   }
   .info .info2 .matchCon .participantsList .participants img {
     cursor: pointer;
-    width: 30px;
-    height: 30px;
-    margin-left: 4px;
-    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    margin-left: 6px;
+    border-radius: 20px;
     transition: 0.3s;
   }
   .info .info2 .matchCon .participantsList .participants img:hover {
